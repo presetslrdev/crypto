@@ -141,7 +141,7 @@ export default Vue.extend({
   data() {
     return {
       isScrolled: false,
-      isOpen: false
+      isOpen: false,
     };
   },
   methods: {
@@ -153,7 +153,7 @@ export default Vue.extend({
       } else {
         this.isScrolled = false;
       }
-    }
+    },
   },
   mounted() {
     this.$nextTick(() => {
@@ -163,7 +163,7 @@ export default Vue.extend({
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.checkScroll);
-  }
+  },
 });
 </script>
 
@@ -181,6 +181,10 @@ export default Vue.extend({
     width: 30px;
     height: 20px;
     margin-left: 50px;
+    display: none;
+    @include media(tablet) {
+      display: block;
+    }
     span {
       display: block;
       width: 30px;

@@ -370,8 +370,8 @@
         <h2>{{ $t("question.title") }}</h2>
         <div class="question__list">
           <custom-accordion
-            v-for="item in questions"
-            :key="item"
+            v-for="(item, index) in questions"
+            :key="index"
             :item="item"
           />
         </div>
@@ -560,6 +560,9 @@ export default Vue.extend({
     max-width: 650px;
   }
   @include media(tablet) {
+    height: 100%;
+    padding-top: 120px;
+    padding-bottom: 120px;
     .btn-wrapper {
       flex-direction: column;
       align-items: flex-start;
