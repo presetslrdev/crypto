@@ -1,0 +1,92 @@
+//fonts
+$nunito: "Nunito", sans-serif;
+$roboto: "Roboto", sans-serif;
+
+//colors
+
+$breakpoints: (
+  //mobile: 480px,
+    mobile-s: 380px,
+  mobile: 480px,
+  mobile-l: 425px,
+  mobile-m: 375px,
+  mobile-xl: 500px,
+  mobile-xxl: 600px,
+  mobile-xxxl: 650px,
+  tablet: 992px,
+  laptop: 1200px,
+  laptop-l: 1440px,
+  desktop: 1600px //desktop: 1800px
+);
+
+// https://rimdev.io/making-media-query-mixins-with-sass/
+@mixin media($breakpoint, $direction: max) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @if $direction == max {
+      @media (max-width: ($breakpoint-value - 1)) {
+        @content;
+      }
+    } @else if $direction == min {
+      @media (min-width: $breakpoint-value) {
+        @content;
+      }
+    } @else {
+      @media ($direction: $breakpoint-value) {
+        @content;
+      }
+    }
+  } @else {
+    @if $direction == max {
+      @media (max-width: $breakpoint) {
+        @content;
+      }
+    } @else if $direction == min {
+      @media (min-width: $breakpoint) {
+        @content;
+      }
+    } @else {
+      @media ($direction: $breakpoint) {
+        @content;
+      }
+    }
+  }
+}
+
+//styles
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0px 20px;
+  margin: 0 auto;
+}
+
+html {
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+body {
+  padding: 0 0;
+  margin: 0 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+@keyframes link-animation {
+  from {
+    left: 0;
+  }
+  to {
+    left: 0;
+  }
+}
