@@ -4,7 +4,7 @@
       <div class="first-screen__wrapper container">
         <div class="first-screen__content">
           <h1 v-html="$t('first-screen.title')"></h1>
-          <p>{{ $t("first-screen.subtitle") }}</p>
+          <p v-html="$t('first-screen.subtitle')"></p>
           <div class="btn-wrapper">
             <btn type="downloads">{{ $t("btn.text") }}</btn>
             <div class="text" v-html="$t('first-screen.info')"></div>
@@ -84,10 +84,11 @@
       <div class="section-info__wrapper container">
         <div class="section-info__item" data-animation>
           <div class="text">
-            <h2>{{ $t("section-block.block1.title") }}</h2>
-            <p>
-              {{ $t("section-block.block1.text") }}
-            </p>
+            <h2 v-html="$t('section-block.block1.title')"></h2>
+            <div
+              class="text-wrapper"
+              v-html="parceText($t('section-block.block1.text'))"
+            ></div>
           </div>
           <div class="images">
             <img src="/image/section-item1.png" alt="image" />
@@ -95,10 +96,11 @@
         </div>
         <div class="section-info__item" data-animation>
           <div class="text">
-            <h2>{{ $t("section-block.block2.title") }}</h2>
-            <p>
-              {{ $t("section-block.block2.text") }}
-            </p>
+            <h2 v-html="$t('section-block.block2.title')"></h2>
+            <div
+              class="text-wrapper"
+              v-html="parceText($t('section-block.block2.text'))"
+            ></div>
           </div>
           <div class="images">
             <img src="/image/section-item2.png" alt="image" />
@@ -106,10 +108,11 @@
         </div>
         <div class="section-info__item" data-animation>
           <div class="text">
-            <h2>{{ $t("section-block.block3.title") }}</h2>
-            <p>
-              {{ $t("section-block.block3.text") }}
-            </p>
+            <h2 v-html="$t('section-block.block3.title')"></h2>
+            <div
+              class="text-wrapper"
+              v-html="parceText($t('section-block.block3.text'))"
+            ></div>
           </div>
           <div class="images">
             <img src="/image/section-item3.png" alt="image" />
@@ -117,10 +120,11 @@
         </div>
         <div class="section-info__item" data-animation>
           <div class="text">
-            <h2>{{ $t("section-block.block4.title") }}</h2>
-            <p>
-              {{ $t("section-block.block4.text") }}
-            </p>
+            <h2 v-html="$t('section-block.block4.title')"></h2>
+            <div
+              class="text-wrapper"
+              v-html="parceText($t('section-block.block4.text'))"
+            ></div>
             <div class="btn-wrapper">
               <btn :type="'card'">{{ $t("btn.text2") }}</btn>
             </div>
@@ -377,7 +381,7 @@
         </div>
       </div>
     </section>
-    <section class="news" id="contacts">
+    <section class="news" v-if="false">
       <div class="news__wrapper container" data-animation>
         <h2>{{ $t("news.title") }}</h2>
         <div class="news__list">
@@ -474,6 +478,9 @@ export default Vue.extend({
     };
   },
   methods: {
+    parceText(text: string) {
+      return "<p>" + text.replace("\n", "</p><p>") + "</p>";
+    },
     blockAnimation() {
       let options = {
         root: null,
@@ -534,7 +541,7 @@ export default Vue.extend({
   }
   .btn-wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     .btn {
       a {
         padding: 20px 40px;
@@ -543,7 +550,7 @@ export default Vue.extend({
 
     .text {
       width: 100%;
-      max-width: 400px;
+      max-width: 380px;
       font-family: $roboto;
       font-weight: 400;
       font-size: 18px;
@@ -557,7 +564,7 @@ export default Vue.extend({
   }
   &__content {
     width: 100%;
-    max-width: 650px;
+    max-width: 700px;
   }
   @include media(tablet) {
     height: 100%;
@@ -667,6 +674,9 @@ export default Vue.extend({
         opacity: 0;
         transform: translateY(-40px);
         transition-delay: 0.3s;
+        &:not(:last-child) {
+          margin-bottom: 50px;
+        }
       }
       @include media(mobile-xxl) {
         h2 {
@@ -785,7 +795,7 @@ export default Vue.extend({
     }
     .btn-wrapper {
       width: 100%;
-      max-width: 240px;
+      max-width: 300px;
       .btn a {
         padding: 20px 40px;
         box-shadow: 0px 14px 30px rgba(227, 30, 36, 0.25);
@@ -1089,7 +1099,7 @@ export default Vue.extend({
     }
     .btn-wrapper {
       width: 100%;
-      max-width: 240px;
+      max-width: 300px;
       .btn {
         a {
           padding: 20px 40px;

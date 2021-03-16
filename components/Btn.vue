@@ -53,12 +53,13 @@ export default Vue.extend({
     font-family: $roboto;
     font-weight: 500;
     font-size: 16px;
-    padding: 12px 40px;
+    padding: 13px 22px;
     color: #fff;
     transition: 0.3s;
     border: 1px solid #e31e24;
     border-radius: 40px;
     background: #e31e24;
+    box-shadow: 0px 14px 30px rgba(227, 30, 36, 0.25);
     svg path {
       transition: 0.3s;
     }

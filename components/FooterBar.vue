@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <div class="footer__wrapper container">
       <div class="footer__top">
         <div class="footer__top-left">
@@ -23,7 +23,7 @@
           <a href="mailTo: info@cryptocourse.app">info@cryptocourse.app</a>
         </div>
       </div>
-      <div class="footer__bottom">
+      <div class="footer__bottom" v-if="false">
         <div class="footer__bottom-left">
           <div class="brand-wrapper">
             <img src="/image/bsb.svg" alt="image" />
@@ -61,6 +61,7 @@ export default Vue.extend({});
   &__top {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 20px;
     a {
       text-decoration: none;
       font-family: $roboto;

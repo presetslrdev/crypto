@@ -54,7 +54,11 @@ export default Vue.extend({
           if (element.isIntersecting) {
             target.classList.add("animated");
           } else {
-            target.classList.remove("animated");
+            const head = target.querySelector(
+              ".accordion__head "
+            ) as HTMLElement;
+            if (!head.classList.contains("open"))
+              target.classList.remove("animated");
           }
         });
       };
