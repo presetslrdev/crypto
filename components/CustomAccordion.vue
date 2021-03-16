@@ -45,7 +45,7 @@ export default Vue.extend({
     blockAnimation() {
       let options = {
         root: null,
-        rootMargin: "-50px 0px -50px 0px",
+        rootMargin: "-70px 0px -70px 0px",
         threshold: 0.5
       };
       let callback = function(entries: any, observer: any) {
@@ -90,8 +90,9 @@ export default Vue.extend({
   margin: 0px auto;
   padding: 20px;
   margin-bottom: 20px;
-  transition: 0.6s;
-  transform: scale(0.7);
+  transition: opacity 1s, transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0.5;
+  transform: scale(0.8);
   transform-origin: center;
   &.animated {
     opacity: 1;

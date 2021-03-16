@@ -14,7 +14,7 @@
     </div>
     <div class="block-info" id="about">
       <div class="block-info__wrapper container">
-        <div class="block">
+        <div class="block" data-animation data-animation-loop>
           <div class="icon">
             <svg
               width="40"
@@ -30,7 +30,7 @@
           </div>
           <div class="text">{{ $t("info-block.block1") }}</div>
         </div>
-        <div class="block">
+        <div class="block" data-animation data-animation-loop>
           <div class="icon">
             <svg
               width="34"
@@ -46,7 +46,7 @@
           </div>
           <div class="text">{{ $t("info-block.block2") }}</div>
         </div>
-        <div class="block">
+        <div class="block" data-animation data-animation-loop>
           <div class="icon">
             <svg
               width="34"
@@ -62,7 +62,7 @@
           </div>
           <div class="text">{{ $t("info-block.block3") }}</div>
         </div>
-        <div class="block">
+        <div class="block" data-animation data-animation-loop>
           <div class="icon">
             <svg
               width="30"
@@ -206,7 +206,7 @@
             <div class="title">{{ $t("mission.tomorrow.title") }}</div>
             <hr />
             <ul>
-              <li>
+              <li data-animation data-animation-loop>
                 <svg
                   width="24"
                   height="24"
@@ -221,7 +221,7 @@
                 </svg>
                 {{ $t("mission.tomorrow.item1") }}
               </li>
-              <li>
+              <li data-animation data-animation-loop>
                 <svg
                   width="24"
                   height="24"
@@ -236,7 +236,7 @@
                 </svg>
                 {{ $t("mission.tomorrow.item2") }}
               </li>
-              <li>
+              <li data-animation data-animation-loop>
                 <svg
                   width="24"
                   height="24"
@@ -251,7 +251,7 @@
                 </svg>
                 {{ $t("mission.tomorrow.item3") }}
               </li>
-              <li>
+              <li data-animation data-animation-loop>
                 <svg
                   width="24"
                   height="24"
@@ -266,7 +266,7 @@
                 </svg>
                 {{ $t("mission.tomorrow.item4") }}
               </li>
-              <li>
+              <li data-animation data-animation-loop>
                 <svg
                   width="24"
                   height="24"
@@ -289,7 +289,7 @@
             </div>
             <hr />
             <ul>
-              <li>
+              <li data-animation data-animation-loop>
                 <svg
                   width="24"
                   height="24"
@@ -304,7 +304,7 @@
                 </svg>
                 {{ $t("mission.today.item1") }}
               </li>
-              <li>
+              <li data-animation data-animation-loop>
                 <svg
                   width="24"
                   height="24"
@@ -319,7 +319,7 @@
                 </svg>
                 {{ $t("mission.today.item2") }}
               </li>
-              <li>
+              <li data-animation data-animation-loop>
                 <svg
                   width="24"
                   height="24"
@@ -334,7 +334,7 @@
                 </svg>
                 {{ $t("mission.today.item3") }}
               </li>
-              <li>
+              <li data-animation data-animation-loop>
                 <svg
                   width="24"
                   height="24"
@@ -349,7 +349,7 @@
                 </svg>
                 {{ $t("mission.today.item4") }}
               </li>
-              <li>
+              <li data-animation data-animation-loop>
                 <svg
                   width="24"
                   height="24"
@@ -491,7 +491,12 @@ export default Vue.extend({
         entries.forEach((element: any) => {
           const target = element.target as HTMLElement;
           if (element.isIntersecting) {
+            options.rootMargin = `-${target.getBoundingClientRect().height}px`;
             target.classList.add("animated");
+          } else {
+            if (target.hasAttribute("data-animation-loop")) {
+              target.classList.remove("animated");
+            }
           }
         });
       };
@@ -515,14 +520,20 @@ export default Vue.extend({
 
 <style lang="scss">
 .first-screen {
-  height: 100vh;
+  height: calc(100vh + 300px);
   background: url("/image/first-screen__bg.jpg") no-repeat;
-  background-size: cover;
+  background-size: cover, 100%;
+  background-position: center;
+  @include media(mobile-xxl) {
+    background-position: 57%;
+  }
   &__wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     height: 100%;
+    @include media(tablet) {
+      justify-content: center;
+    }
   }
   h1 {
     font-family: $roboto;
@@ -538,6 +549,9 @@ export default Vue.extend({
     line-height: 46px;
     color: #43465d;
     margin-bottom: 30px;
+    @include media(tablet) {
+      margin-bottom: 20px;
+    }
   }
   .btn-wrapper {
     display: flex;
@@ -565,28 +579,46 @@ export default Vue.extend({
   &__content {
     width: 100%;
     max-width: 700px;
-  }
-  @include media(tablet) {
-    height: 100%;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    .btn-wrapper {
-      flex-direction: column;
-      align-items: flex-start;
-      .text {
-        margin-left: 0px;
-        margin-top: 20px;
-      }
+    margin-top: 25%;
+    @include media(tablet) {
+      margin-top: 0px;
     }
   }
   @include media(mobile-xxl) {
+    height: 100%;
+    min-height: 930px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .btn-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      align-items: center;
+      .btn a {
+        padding: 13px 20px;
+        font-size: 18px;
+      }
+      .text {
+        margin-left: 0px;
+        margin-top: 200px;
+      }
+    }
     h1 {
-      font-size: 40px;
-      line-height: 48px;
+      font-size: 46px;
+      line-height: 46px;
     }
     p {
       font-size: 24px;
       line-height: 34px;
+    }
+  }
+  @include media(mobile-xl) {
+    h1 {
+      font-size: 36px;
     }
   }
 }
@@ -595,7 +627,7 @@ export default Vue.extend({
     display: flex;
     justify-content: space-between;
     position: relative;
-    top: -50px;
+    top: -20px;
     .block {
       width: 100%;
       max-width: 282px;
@@ -603,6 +635,23 @@ export default Vue.extend({
       background: #fff;
       filter: drop-shadow(10px 4px 30px rgba(0, 0, 0, 0.04));
       border-radius: 15px;
+      transition: opacity 1s, transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transform-origin: center;
+      opacity: 0.5;
+      transform: scale(0.8);
+      &.animated {
+        transform: scale(1);
+        opacity: 1;
+      }
+      &:nth-child(2) {
+        transition-delay: 0.2s;
+      }
+      &:nth-child(3) {
+        transition-delay: 0.4s;
+      }
+      &:nth-child(4) {
+        transition-delay: 0.6s;
+      }
       &:not(:last-child) {
         margin-right: 15px;
       }
@@ -618,6 +667,7 @@ export default Vue.extend({
     @include media(laptop) {
       flex-wrap: wrap;
       justify-content: flex-start;
+      top: -140px;
       .block {
         width: calc(33% - 15px);
         max-width: inherit;
@@ -629,15 +679,23 @@ export default Vue.extend({
         width: calc(50% - 15px);
       }
     }
-    @include media(tablet) {
-      .block {
-        width: calc(50% - 15px);
-      }
-    }
     @include media(mobile-xl) {
+      top: -100px;
       .block {
         width: 100%;
         margin-right: 0px;
+        &:not(:last-child) {
+          margin-right: 0px;
+        }
+        &:nth-child(2) {
+          transition-delay: 0s;
+        }
+        &:nth-child(3) {
+          transition-delay: 0s;
+        }
+        &:nth-child(4) {
+          transition-delay: 0s;
+        }
       }
     }
   }
@@ -664,6 +722,10 @@ export default Vue.extend({
         transition: 0.6s cubic-bezier(0.11, 0.54, 0, 1.01);
         opacity: 0;
         transform: translateY(-40px);
+        @include media(mobile-xl) {
+          font-size: 36px;
+          line-height: 46px;
+        }
       }
       p {
         font-family: $nunito;
@@ -678,16 +740,16 @@ export default Vue.extend({
           margin-bottom: 50px;
         }
       }
-      @include media(mobile-xxl) {
-        h2 {
-          font-size: 24px;
-          line-height: 34px;
-        }
-        p {
-          font-size: 18px;
-          line-height: 28px;
-        }
-      }
+      // @include media(mobile-xxl) {
+      //   h2 {
+      //     font-size: 24px;
+      //     line-height: 34px;
+      //   }
+      //   p {
+      //     font-size: 18px;
+      //     line-height: 28px;
+      //   }
+      // }
       .btn-wrapper {
         margin-top: 25px;
         width: 100%;
@@ -739,9 +801,22 @@ export default Vue.extend({
     }
   }
   @include media(mobile-xxl) {
+    overflow: hidden;
     margin-top: 50px;
     &__item {
       margin-bottom: 50px;
+      &:nth-child(1) {
+        .images {
+          width: 600px;
+        }
+      }
+      &:nth-child(3) {
+        .images {
+          width: 560px;
+          left: 120px;
+          position: relative;
+        }
+      }
     }
   }
 }
@@ -812,13 +887,26 @@ export default Vue.extend({
   }
   @include media(mobile-xxl) {
     margin: 50px 0px;
+    &__left {
+      padding: 100px 0px;
+    }
     h2 {
-      font-size: 24px;
-      line-height: 34px;
+      text-align: center;
     }
     ul li {
       font-size: 18px;
       line-height: 28px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      svg {
+        margin-right: 0px;
+        margin-bottom: 10px;
+      }
+    }
+    .btn-wrapper {
+      margin: 0 auto;
     }
   }
 }
@@ -895,6 +983,15 @@ export default Vue.extend({
         max-width: 385px;
         font-size: 18px;
         line-height: 28px;
+        transition: opacity 1s,
+          transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transform-origin: center;
+        opacity: 0.5;
+        transform: scale(0.8);
+        &.animated {
+          opacity: 1;
+          transform: scale(1);
+        }
         @include media(tablet) {
           max-width: 100%;
         }
@@ -935,14 +1032,14 @@ export default Vue.extend({
   }
   @include media(mobile-xxl) {
     &__head {
-      h2 {
-        font-size: 24px;
-        line-height: 34px;
-      }
-      p {
-        font-size: 18px;
-        line-height: 28px;
-      }
+      // h2 {
+      //   font-size: 24px;
+      //   line-height: 34px;
+      // }
+      // p {
+      //   font-size: 18px;
+      //   line-height: 28px;
+      // }
     }
     &__content {
       padding: 30px;
@@ -973,10 +1070,10 @@ export default Vue.extend({
   }
   @include media(mobile-xxl) {
     margin-top: 50px;
-    h2 {
-      font-size: 24px;
-      line-height: 34px;
-    }
+    // h2 {
+    //   font-size: 24px;
+    //   line-height: 34px;
+    // }
   }
 }
 .news {
@@ -1077,6 +1174,10 @@ export default Vue.extend({
     background-size: cover;
     padding: 50px 0px 50px 100px;
     border-radius: 15px;
+    @include media(laptop) {
+      margin: 0px 20px;
+      padding-right: 20px;
+    }
   }
   &__content {
     width: 100%;

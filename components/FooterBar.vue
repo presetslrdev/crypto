@@ -58,6 +58,12 @@ export default Vue.extend({});
 
 <style scoped lang="scss">
 .footer {
+  &__wrapper {
+    padding: 0 0;
+    @include media(laptop) {
+      padding: 0px 20px;
+    }
+  }
   &__top {
     display: flex;
     justify-content: space-between;

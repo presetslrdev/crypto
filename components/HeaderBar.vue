@@ -84,9 +84,14 @@
         <nav class="header__nav" :class="{ open: isOpen }">
           <ul>
             <li>
-              <nuxt-link to="#" v-scroll-to="{ el: '#about', offset: -120 }">{{
-                $t("header.about-service")
-              }}</nuxt-link>
+              <nuxt-link
+                to="#"
+                v-scroll-to="{
+                  el: '#about',
+                  offset: checkMobile ? -200 : -120
+                }"
+                >{{ $t("header.about-service") }}</nuxt-link
+              >
             </li>
             <li>
               <nuxt-link to="#" v-scroll-to="'#benefits'">{{
@@ -154,10 +159,18 @@ export default Vue.extend({
   data() {
     return {
       isScrolled: false,
-      isOpen: false
+      isOpen: false,
+      isMobile: false
     };
   },
   methods: {
+    checkMobile() {
+      if (window.innerWidth < 600) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
+    },
     checkScroll() {
       const top = window.scrollY;
       this.isOpen = false;
@@ -171,11 +184,14 @@ export default Vue.extend({
   mounted() {
     this.$nextTick(() => {
       window.addEventListener("scroll", this.checkScroll);
+      window.addEventListener("resize", this.checkMobile);
+      this.checkMobile();
       this.checkScroll();
     });
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.checkScroll);
+    window.removeEventListener("resize", this.checkMobile);
   }
 });
 </script>
@@ -191,7 +207,13 @@ export default Vue.extend({
   transition: 0.3s;
   background: #fff;
   &.scrolled {
-    box-shadow: 0px 2px 5px rgb(227 30 36 / 14%);
+    box-shadow: 0px 2px 5px rgb(0 0 0 / 14%);
+    height: 60px;
+    .header__logo {
+      svg {
+        width: 150px;
+      }
+    }
   }
   &__burger {
     position: relative;
@@ -243,8 +265,7 @@ export default Vue.extend({
     top: 0;
     width: 100%;
     height: 60px;
-    background: rgba(#fff, 0.2);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(#fff, 0.56);
     backdrop-filter: blur(20px);
     opacity: 0;
     transition: 0.3s;
@@ -331,17 +352,28 @@ export default Vue.extend({
         transition: 0.3s;
         position: relative;
         text-transform: uppercase;
-        text-decoration: underline;
         &:before {
           content: "";
-          width: 0%;
+          width: 100%;
           height: 1px;
           display: block;
           position: absolute;
           background: #43465d;
-          right: 0;
+          left: 0;
           bottom: 0;
           transition: 0.3s;
+        }
+        &:hover {
+          &:before {
+            width: 0;
+            left: initial;
+            animation: link-animation 2s;
+          }
+        }
+        @include media(mobile-xxl) {
+          &:before {
+            display: none;
+          }
         }
       }
     }
@@ -426,6 +458,13 @@ export default Vue.extend({
         ::v-deep a {
           font-size: 24px;
         }
+      }
+    }
+  }
+  @include media(mobile-s) {
+    &__logo {
+      svg {
+        width: 200px;
       }
     }
   }

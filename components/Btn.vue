@@ -70,8 +70,9 @@ export default Vue.extend({
       margin-right: 10px;
     }
     &:hover {
-      background: transparent;
+      background: #fff;
       color: #e31e24;
+      box-shadow: none;
       .downloads,
       .card {
         path {
