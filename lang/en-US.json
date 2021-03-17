@@ -8,12 +8,12 @@
     "list": {
       "item1": "Track cryptocurrency rates",
       "item2": "Manage your portfolio",
-      "item3": "Follow the news from the world of digital finance in one application"
+      "item3": "Follow the news from the world of digital finance in one Application"
     },
-    "title": "application"
+    "title": "Application"
   },
   "baner": {
-    "text": "Get early access to the app now",
+    "text": "Get early access to the App now",
     "title": "The world of cryptocurrency has become more accessible with us"
   },
   "btn": {
@@ -21,9 +21,9 @@
     "text2": "Order a card"
   },
   "first-screen": {
-    "info": "<span class = \"red\"> CryptoCourse </span> makes investing in and using cryptocurrencies easy, transparent and secure",
-    "subtitle": "Cryptocurrency wallet and bank account in one application",
-    "title": "Your beacon to the world <br /> of cryptocurrencies"
+    "info": "<span class = \"red\"> CryptoCourse </span> makes investing in and using cryptocurrencie easy, transparent and secure",
+    "subtitle": "Cryptocurrency wallet and bank account in one Application",
+    "title": "Your beacon to the world <br /> of cryptocurrencie"
   },
   "footer": {
     "design": "Design",
@@ -38,7 +38,7 @@
     "block4": "Bank security level"
   },
   "mission": {
-    "subtitle": "We provide <span class = \"red\"> simple </span>, <span class = \"red\"> transparent </span> and <span class = \"red\"> secure access </span> to the benefits of digital finance for everyone \nregardless of the level of technical training, available funds or geography.",
+    "subtitle": "We provide <span class = \"red\"> simple</span>, <span class = \"red\"> transparent </span> and <span class = \"red\"> secure access </span> to the benefits of digital finance for everyone \nregardless of the level of technical training, available funds or geography.",
     "title": "Our mission",
     "today": {
       "item1": "Fully adjustable platform",
@@ -71,11 +71,11 @@
     },
     "item3": {
       "title": "How to open an account with CryptoCourse?",
-      "text": "<p> If you are a citizen of the Republic of Belarus, you need to register in the application using the Interbank Identification System of the Republic of Belarus. </p> <p> <strong> If you are not a citizen of the Republic of Belarus, you need to register in the application by confirming \nyour identity using biometric identification. </strong> </p>"
+      "text": "<p> If you are a citizen of the Republic of Belarus, you need to register in the Application using the Interbank Identification System of the Republic of Belarus. </p> <p> <strong> If you are not a citizen of the Republic of Belarus, you need to register in the Application by confirming \nyour identity using biometric identification. </strong> </p>"
     },
     "item4": {
       "title": "How does a fiat account at CryptoCourse work?",
-      "text": "<p> To work with fiat currencies, when registering in the CryptoCourse application, the user opens a registered bank account. \nServices for working with fiat currencies are provided by CJSC \"BSB Bank\". </p> <p> The complete safety of funds in your bank account is guaranteed by the state without any restrictions on the amount in accordance with the legislation of the Republic of Belarus. \n[Agency for Guaranteed Reimbursement of Bank Deposits (Deposits) of Individuals: <a href=\"https://www.bsb.by/bank/adc/\" target=\"_blank\"> https://www.bsb.by/bank \n/ adc / </a>] </p> <p> CJSC “BSB Bank” is a bank with 100% private Swiss capital, has been operating in the banking services market since 2002. \nMore information about the bank: <a href=\"https://www.bsb.by/about/about_bank/\" target=\"_blank\"> https://www.bsb.by/about/about_bank/ </a>. < \n/ p> <p> Replenishment and withdrawal of funds from a fiat account in CryptoCourse is possible by bank transfer (including through the international interbank system SWIFT), as well as in cash at an ATM (after ordering a bank card CryptoCourse). </p>"
+      "text": "<p> To work with fiat currencies, when registering in the CryptoCourse Application, the user opens a registered bank account. \nServices for working with fiat currencies are provided by CJSC \"BSB Bank\". </p> <p> The complete safety of funds in your bank account is guaranteed by the state without any restrictions on the amount in accordance with the legislation of the Republic of Belarus. \n[Agency for Guaranteed Reimbursement of Bank Deposits (Deposits) of Individuals: <a href=\"https://www.bsb.by/bank/adc/\" target=\"_blank\"> https://www.bsb.by/bank \n/ adc / </a>] </p> <p> CJSC “BSB Bank” is a bank with 100% private Swiss capital, has been operating in the banking services market since 2002. \nMore information about the bank: <a href=\"https://www.bsb.by/about/about_bank/\" target=\"_blank\"> https://www.bsb.by/about/about_bank/ </a>. < \n/ p> <p> Replenishment and withdrawal of funds from a fiat account in CryptoCourse is possible by bank transfer (including through the international interbank system SWIFT), as well as in cash at an ATM (after ordering a bank card CryptoCourse). </p>"
     },
     "item5": {
       "title": "How can I get a CryptoCourse bank card?",
@@ -89,7 +89,7 @@
   },
   "section-block": {
     "block1": {
-      "text": "CryptoCourse is a crypto wallet created as a result of cooperation between BSB Bank and Currency.com. \nWith CryptoCourse, buying and selling Bitcoin and other cryptocurrencies becomes as easy and affordable as transactions with the Dollar or Euro.",
+      "text": "CryptoCourse is a crypto wallet created as a result of cooperation between BSB Bank and Currency.com. \nWith CryptoCourse, buying and selling Bitcoin and other cryptocurrencies becomes as easy and affordable as transactions with Dollar or Euro.",
       "title": "Buy and sell cryptocurrency legally"
     },
     "block2": {
@@ -97,11 +97,11 @@
       "title": "Store cryptocurrency in your own wallet"
     },
     "block3": {
-      "text": "Your fiat balance in the CryptoCourse app is a full-fledged bank account in your name. \nCryptoCourse does not store your money, entrusting this important function to the bank.",
+      "text": "Your fiat balance in the CryptoCourse App is a full-fledged bank account in your name. \nCryptoCourse does not store your money, entrusting this important function to the bank.",
       "title": "Your funds are under reliable bank protection"
     },
     "block4": {
-      "text": "Order a CryptoCourse bank card linked to your balance in the app and get the opportunity to pay for purchases with it, as well as withdraw money from your account at ATMs around the world.",
+      "text": "Order a CryptoCourse bank card linked to your balance in the App and get the opportunity to pay for purchases with it, as well as withdraw money from your account at ATMs around the world.",
       "title": "The first crypto map in Eastern Europe"
     }
   }
