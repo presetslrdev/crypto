@@ -499,7 +499,6 @@ export default Vue.extend({
           head: this.$i18n.t("question.item3.title"),
           content: this.$i18n.t("question.item3.text")
         },
-
         {
           head: this.$i18n.t("question.item4.title"),
           content: this.$i18n.t("question.item4.text")
@@ -892,6 +891,7 @@ export default Vue.extend({
     position: relative;
     width: 100%;
     max-width: 1000px;
+    min-height: 465px;
     h2 {
       font-family: $roboto;
       font-weight: bold;
@@ -1035,7 +1035,7 @@ export default Vue.extend({
         font-family: $nunito;
         font-weight: 600;
         width: 100%;
-        max-width: 385px;
+        max-width: 390px;
         font-size: 18px;
         line-height: 28px;
         transition: opacity 1s,
@@ -1075,14 +1075,28 @@ export default Vue.extend({
       }
       hr {
         border-top: 2px solid #e31e24;
+        width: calc(100% - 40px);
+        @include media(tablet) {
+          width: 100%;
+        }
       }
       ul li {
         opacity: 0.7;
+        &.animated {
+          opacity: 0.7;
+        }
       }
     }
     &-green {
       hr {
         border-top: 2px solid #5bc980;
+        position: relative;
+        width: calc(100% + 40px);
+        left: -40px;
+        @include media(tablet) {
+          width: 100%;
+          left: 0;
+        }
       }
       ul li svg {
         min-width: 14px;
