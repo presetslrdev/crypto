@@ -48,7 +48,12 @@
           </div>
           <div class="text">{{ $t("info-block.block2") }}</div>
         </div>
-        <div class="block" data-animation data-animation-loop>
+        <div
+          class="block"
+          data-animation
+          data-animation-loop
+          style="padding-right: 5px"
+        >
           <div class="icon">
             <svg
               width="40"

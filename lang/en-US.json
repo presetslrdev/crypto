@@ -34,7 +34,7 @@
   "info-block": {
     "block1": "Fully regulated platform",
     "block2": "Favorable exchange rates",
-    "block3": "The first crypto card in Eastern Europe",
+    "block3": "A bank card linked to your account in the App",
     "block4": "Bank-level security"
   },
   "mission": {
@@ -78,7 +78,7 @@
       "text": "<p> To work with fiat currencies, when registering in the CryptoCourse Application, the user opens a registered bank account. \nServices for working with fiat currencies are provided by CJSC &laquo;BSB Bank&raquo;. </p> <p> The complete safety of funds in your bank account is guaranteed by the state without any restrictions on the amount in accordance with the legislation of the Republic of Belarus. \nAgency for Guaranteed Reimbursement of Bank Deposits (Deposits) of Individuals: <a href=\"https://www.bsb.by/bank/adc/\" target=\"_blank\"> https://www.bsb.by/bank \n/ adc / </a> </p> <p> CJSC &laquo;BSB Bank&raquo; is a bank with 100% private Swiss capital, has been operating in the banking services market since 2002. \nMore information about the bank: <a href=\"https://www.bsb.by/about/about_bank/\" target=\"_blank\"> https://www.bsb.by/about/about_bank/ </a>. </p> <p> Replenishment and withdrawal of funds from a fiat account in CryptoCourse is possible by bank transfer (including through the international interbank system SWIFT), as well as in cash at an ATM (after ordering a bank card CryptoCourse). </p>"
     },
     "item5": {
-      "title": "How can I get CryptoCourse bank card?",
+      "title": "How can I order the BSB Bank debit card?",
       "text": "<p>CryptoCourse operates in accordance with Swiss law and the international recommendations of Financial Action Task Force (FATF).</p><p>Transactions with fiat are carried out in partnership with JSC «BSB Bank» on the basis of license No.7 from 18.09.2017 issued by the National Bank of the Republic of Belarus in accordance with the legislation of the Republic of Belarus.</p><p>Exchange transactions with cryptocurrency are carried out on a regulated cryptoplatform Currency.com. Currency Com Bel Limited Liability Company is a legal entity registered by the Minsk City Executive Committee on September 4, 2018 in the Republic of Belarus under registration number 193130368. Currency Com Bel Limited Liability is a resident of the High Technologies Park (the Republic of Belarus) and is authorised under the legislation of the Republic of Belarus to carry out virtual assets-related types of activity. Since Currency Com Bel Limited Liability Company has the status of a cryptoplatform operator within the meaning of the Decree of the President of the Republic of Belarus No.8 «On development of digital economy» dated December 21, 2017 we may refer the expression «cryptoexchange» («crypto exchange», «cryptocurrency exchange») to this legal entity and its activity.</p>"
     },
     "item6": {
@@ -101,8 +101,8 @@
       "title": "Your funds are under reliable bank protection"
     },
     "block4": {
-      "text": "Order CryptoCourse bank card added to your balance in the App and pay for the purchases as well as receive cash in ATMs around the world.",
-      "title": "The first crypto card in Eastern Europe"
+      "text": "Order the BSB Bank debit card linked to your account in the App and pay for the purchases as well as receive cash in ATMs around the world.",
+      "title": "Add your card to the wallet"
     }
   }
 }
