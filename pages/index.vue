@@ -145,7 +145,7 @@
               <btn :type="'card'">{{ $t("btn.text2") }}</btn>
             </div>
           </div>
-          <div class="images">
+          <div class="images images-card">
             <img src="/image/section-item4.png" alt="image" />
           </div>
         </div>
@@ -825,6 +825,19 @@ export default Vue.extend({
       opacity: 0;
       transition: 0.6s;
       transition-delay: 0.6s;
+      &-card {
+        width: 100%;
+        max-width: 550px;
+        margin-right: 20px;
+        @include media(tablet) {
+          margin-right: 0px;
+        }
+        img {
+          border-radius: 10px;
+          display: block;
+          width: 100%;
+        }
+      }
       img {
         width: 100%;
         display: block;
