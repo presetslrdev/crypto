@@ -513,7 +513,6 @@ export default Vue.extend({
           head: this.$i18n.t("question.item5.title"),
           content: this.$i18n.t("question.item5.text")
         },
-
         {
           head: this.$i18n.t("question.item6.title"),
           content: this.$i18n.t("question.item6.text")
