@@ -34,7 +34,7 @@
     "info-block": {
         "block1": "Fully regulated platform",
         "block2": "Favorable exchange rates",
-        "block3": "A bank card linked to your account in the App",
+        "block3": "First cryptoсard in Eastern Europe",
         "block4": "Bank-level security"
     },
     "mission": {
@@ -101,8 +101,8 @@
             "title": "Your funds are under reliable bank protection"
         },
         "block4": {
-            "text": "Order the BSB Bank debit card linked to your account in the App and pay for the purchases as well as receive cash in ATMs around the world.",
-            "title": "Add your card to the wallet"
+            "text": "Order CryptoCourse debit card linked to your account in the App and pay for the purchases as well as receive cash in ATMs around the world.",
+            "title": "First cryptoсard in Eastern Europe"
         }
     }
 }
