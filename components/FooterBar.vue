@@ -6,7 +6,7 @@
           <a
             :href="
               $i18n.locale == 'ru'
-                ? 'ПОЛИТИКА_ОБРАБОТКИ_ПЕРСОНАЛЬНЫХ_ДАННЫХ.pdf'
+                ? 'PRIVACY_POLICY_RU.pdf'
                 : 'PRIVACY_POLICY.pdf'
             "
             target="_blank"
