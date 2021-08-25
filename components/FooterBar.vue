@@ -3,7 +3,15 @@
     <div class="footer__wrapper container">
       <div class="footer__top">
         <div class="footer__top-left">
-          <nuxt-link to="#">{{ $t("footer.politics") }}</nuxt-link>
+          <a
+            :href="
+              $i18n.locale == 'ru'
+                ? 'ПОЛИТИКА_ОБРАБОТКИ_ПЕРСОНАЛЬНЫХ_ДАННЫХ.pdf'
+                : 'PRIVACY_POLICY.pdf'
+            "
+            target="_blank"
+            >{{ $t("footer.politics") }}</a
+          >
           <nuxt-link to="#">{{ $t("footer.rules") }}</nuxt-link>
         </div>
         <div class="footer__top-right">
