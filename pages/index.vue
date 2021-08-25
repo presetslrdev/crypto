@@ -431,9 +431,7 @@
         <h2>{{ $t("news.title") }}</h2>
         <div class="news__list">
           <a href="#" class="news__item" target="_blank">
-            <div class="news__who">
-              ТАСС
-            </div>
+            <div class="news__who">ТАСС</div>
             <div class="news__title">
               Brent поднялась выше $30 за баррель впервые с 15 апреля
             </div>
@@ -443,9 +441,7 @@
             </div>
           </a>
           <a href="#" class="news__item" target="_blank">
-            <div class="news__who">
-              TUT.BY
-            </div>
+            <div class="news__who">TUT.BY</div>
             <div class="news__title">
               Трамп заявил, что нефтяные цены снова растут вслед за спросом на
               сырье
@@ -456,9 +452,7 @@
             </div>
           </a>
           <a href="#" class="news__item" target="_blank">
-            <div class="news__who">
-              TUT.BY
-            </div>
+            <div class="news__who">TUT.BY</div>
             <div class="news__title">
               В Дептрансе назвали стоимость масок и перчаток в метро Москвы
             </div>
@@ -494,30 +488,30 @@ export default Vue.extend({
       questions: [
         {
           head: this.$i18n.t("question.item1.title"),
-          content: this.$i18n.t("question.item1.text")
+          content: this.$i18n.t("question.item1.text"),
         },
         {
           head: this.$i18n.t("question.item2.title"),
-          content: this.$i18n.t("question.item2.text")
+          content: this.$i18n.t("question.item2.text"),
         },
         {
           head: this.$i18n.t("question.item3.title"),
-          content: this.$i18n.t("question.item3.text")
+          content: this.$i18n.t("question.item3.text"),
         },
         {
           head: this.$i18n.t("question.item4.title"),
-          content: this.$i18n.t("question.item4.text")
+          content: this.$i18n.t("question.item4.text"),
         },
 
         {
           head: this.$i18n.t("question.item5.title"),
-          content: this.$i18n.t("question.item5.text")
+          content: this.$i18n.t("question.item5.text"),
         },
         {
           head: this.$i18n.t("question.item6.title"),
-          content: this.$i18n.t("question.item6.text")
-        }
-      ]
+          content: this.$i18n.t("question.item6.text"),
+        },
+      ],
     };
   },
   methods: {
@@ -528,9 +522,9 @@ export default Vue.extend({
       let options = {
         root: null,
         rootMargin: "5px",
-        threshold: 0.5
+        threshold: 0.5,
       };
-      let callback = function(entries: any, observer: any) {
+      let callback = function (entries: any, observer: any) {
         entries.forEach((element: any) => {
           const target = element.target as HTMLElement;
           if (element.isIntersecting) {
@@ -551,13 +545,13 @@ export default Vue.extend({
       targetArray.forEach((target: any) => {
         observer.observe(target);
       });
-    }
+    },
   },
   mounted() {
     this.$nextTick(() => {
       this.blockAnimation();
     });
-  }
+  },
 });
 </script>
 
@@ -815,6 +809,10 @@ export default Vue.extend({
         transform: translateY(-40px);
         transition-delay: 0.8s;
         a {
+          min-width: 300px;
+          @include media(tablet) {
+            min-width: auto;
+          }
           padding: 20px 40px;
           box-shadow: 0px 14px 30px rgba(227, 30, 36, 0.25);
         }
