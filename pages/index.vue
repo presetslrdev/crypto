@@ -803,13 +803,12 @@ export default Vue.extend({
       .btn-wrapper {
         margin-top: 25px;
         width: 100%;
-        max-width: 245px;
+        max-width: 300px;
         transition: 0.6s;
         opacity: 0;
         transform: translateY(-40px);
         transition-delay: 0.8s;
         a {
-          min-width: 300px;
           @include media(tablet) {
             min-width: auto;
           }

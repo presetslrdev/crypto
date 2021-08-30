@@ -28,7 +28,7 @@
             />
           </svg>
 
-          <a href="mailTo: info@cryptocourse.app">info@cryptocourse.app</a>
+          <a href="mailto: info@cryptocourse.app">info@cryptocourse.app</a>
         </div>
       </div>
       <div class="footer__bottom" v-if="false">

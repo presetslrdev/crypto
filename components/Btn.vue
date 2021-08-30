@@ -5,25 +5,28 @@
         class="card"
         v-if="type == 'card'"
         width="24"
-        height="25"
+        height="24"
+        viewBox="0 0 24 25"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M20 4.513H4c-1.11 0-1.99.89-1.99 2l-.01 12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2v-12c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4v-2h16v2z"
-          fill="#fff"
+          d="M20 4.5127H4C2.89 4.5127 2.01 5.4027 2.01 6.5127L2 18.5127C2 19.6227 2.89 20.5127 4 20.5127H20C21.11 20.5127 22 19.6227 22 18.5127V6.5127C22 5.4027 21.11 4.5127 20 4.5127ZM20 18.5127H4V12.5127H20V18.5127ZM20 8.5127H4V6.5127H20V8.5127Z"
+          fill="white"
         />
       </svg>
+
       <span><slot /></span>
       <svg
         class="downloads"
         v-if="type == 'downloads'"
-        width="14"
-        height="17"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M14 6h-4V0H4v6H0l7 7 7-7zM0 15v2h14v-2H0z" fill="#fff" />
+        <path d="M19 9H15V3H9V9H5L12 16L19 9ZM5 18V20H19V18H5Z" fill="white" />
       </svg>
     </nuxt-link>
   </div>
@@ -37,9 +40,9 @@ export default Vue.extend({
     type: {
       type: String,
       required: false,
-      default: false
-    }
-  }
+      default: false,
+    },
+  },
 });
 </script>
 
