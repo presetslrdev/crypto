@@ -1,108 +1,113 @@
 {
-    "header": {
-        "about-service": "About the service",
-        "benefits": "Benefits",
-        "contacts": "Contacts"
+  "header": {
+    "about-service": "About the service",
+    "benefits": "Benefits",
+    "contacts": "Contacts"
+  },
+  "app": {
+    "list": {
+      "item1": "Track cryptocurrency rates",
+      "item2": "Manage your portfolio",
+      "item3": "Follow the news from the world of digital finance in one Application"
     },
-    "app": {
-        "list": {
-            "item1": "Track cryptocurrency rates",
-            "item2": "Manage your portfolio",
-            "item3": "Follow the news from the world of digital finance in one Application"
-        },
-        "title": "Application"
+    "title": "Application"
+  },
+  "baner": {
+    "text": "Get early access to the App now",
+    "title": "The world of cryptocurrency has become more accessible with us"
+  },
+  "btn": {
+    "text": "Download app",
+    "text2": "Order a card",
+    "text-about": "More about the card"
+  },
+  "first-screen": {
+    "info": "<span class = \"red\"> CryptoCourse </span> makes investing in and using cryptocurrencies easy, transparent and secure",
+    "subtitle": "Cryptocurrency wallet and bank account in one application",
+    "title": "Your beacon in to the world <br /> of cryptocurrencies"
+  },
+  "footer": {
+    "design": "Design",
+    "develop": "Development of",
+    "politics": "Privacy Policy",
+    "rules": "Terms of use"
+  },
+  "info-block": {
+    "block1": "Fully regulated platform",
+    "block2": "Favorable exchange rates",
+    "block3": "First cryptoсard in Eastern Europe",
+    "block4": "Bank-level security"
+  },
+  "mission": {
+    "subtitle": "We provide <span class = \"red\"> simple</span>, <span class = \"red\"> transparent </span> and <span class = \"red\"> secure access </span> to the benefits of digital finance for everyone \nregardless of the level of technical training, available funds or geography.",
+    "title": "Our mission",
+    "today": {
+      "item1": "Fully regulated platform",
+      "item2": "Direct purchase/sale of cryptocurrency from a bank account",
+      "item3": "Favorable exchange rates",
+      "item4": "Own wallet",
+      "item5": "Possibility to issue a payment card linked to your account",
+      "title": "Today"
     },
-    "baner": {
-        "text": "Get early access to the App now",
-        "title": "The world of cryptocurrency has become more accessible with us"
-    },
-    "btn": {
-        "text": "Download app",
-        "text2": "Order a card"
-    },
-    "first-screen": {
-        "info": "<span class = \"red\"> CryptoCourse </span> makes investing in and using cryptocurrencies easy, transparent and secure",
-        "subtitle": "Cryptocurrency wallet and bank account in one application",
-        "title": "Your beacon in to the world <br /> of cryptocurrencies"
-    },
-    "footer": {
-        "design": "Design",
-        "develop": "Development of",
-        "politics": "Privacy Policy",
-        "rules": "Terms of use"
-    },
-    "info-block": {
-        "block1": "Fully regulated platform",
-        "block2": "Favorable exchange rates",
-        "block3": "First cryptoсard in Eastern Europe",
-        "block4": "Bank-level security"
-    },
-    "mission": {
-        "subtitle": "We provide <span class = \"red\"> simple</span>, <span class = \"red\"> transparent </span> and <span class = \"red\"> secure access </span> to the benefits of digital finance for everyone \nregardless of the level of technical training, available funds or geography.",
-        "title": "Our mission",
-        "today": {
-            "item1": "Fully regulated platform",
-            "item2": "Direct purchase/sale of cryptocurrency from a bank account",
-            "item3": "Favorable exchange rates",
-            "item4": "Own wallet",
-            "item5": "Possibility to issue a payment card linked to your account",
-            "title": "Today"
-        },
-        "tomorrow": {
-            "item1": "Gray, opaque services",
-            "item2": "Purchase/sale of cryptocurrency for cash/transfers through payment systems",
-            "item3": "High conversion losses",
-            "item4": "Exchangers controlling your funds",
-            "item5": "Bank account blocking risk",
-            "title": "Yesterday"
-        }
-    },
-    "news": {
-        "title": "Press about us"
-    },
-    "question": {
-        "item1": {
-            "text": "<p>CryptoCourse operates in accordance with Swiss law and the international recommendations of Financial Action Task Force (FATF).</p><p>Transactions with fiat are carried out in partnership with JSC «BSB Bank» on the basis of license No.7 from 18.09.2017 issued by the National Bank of the Republic of Belarus in accordance with the legislation of the Republic of Belarus.</p><p>Exchange transactions with cryptocurrency are carried out on a regulated cryptoplatform Currency.com. Currency Com Bel Limited Liability Company is a legal entity registered by the Minsk City Executive Committee on September 4, 2018 in the Republic of Belarus under registration number 193130368. Currency Com Bel Limited Liability is a resident of the High Technologies Park (the Republic of Belarus) and is authorised under the legislation of the Republic of Belarus to carry out virtual assets-related types of activity. Since Currency Com Bel Limited Liability Company has the status of a cryptoplatform operator within the meaning of the Decree of the President of the Republic of Belarus No.8 «On development of digital economy» dated December 21, 2017 we may refer the expression «cryptoexchange» («crypto exchange», «cryptocurrency exchange») to this legal entity and its activity.</p>",
-            "title": "What is the legal status of the CryptoCourse service?"
-        },
-        "item2": {
-            "title": "Citizens of which countries can become CryptoCourse users?",
-            "text": "CryptoCourse service is not available for residents of the following countries: Albania, Bahamas, Barbados, Bermuda, Botswana, Ghana, Jamaica, Mauritius, Myanmar, Nicaragua, Pakistan, Panama, Syria, Uganda, Yemen, Zimbabwe, Democratic People's Republic of Korea (DPRK) \n, Iran, United States of America."
-        },
-        "item3": {
-            "title": "How to open an account with CryptoCourse?",
-            "text": "<p> If you are a citizen of the Republic of Belarus, you need to register in the Application using the Interbank Identification System of the Republic of Belarus. </p>"
-        },
-        "item4": {
-            "title": "How does a fiat account at CryptoCourse work?",
-            "text": "<p> To work with fiat currencies, when registering in the CryptoCourse Application, the user opens a registered bank account. \nServices for working with fiat currencies are provided by CJSC &laquo;BSB Bank&raquo;. </p> <p> The complete safety of funds in your bank account is guaranteed by the state without any restrictions on the amount in accordance with the legislation of the Republic of Belarus. \nAgency for Guaranteed Reimbursement of Bank Deposits (Deposits) of Individuals: <a href=\"https://www.bsb.by/bank/adc/\" target=\"_blank\"> https://www.bsb.by/bank \n/ adc / </a> </p> <p> CJSC &laquo;BSB Bank&raquo; is a bank with 100% private Swiss capital, has been operating in the banking services market since 2002. \nMore information about the bank: <a href=\"https://www.bsb.by/about/about_bank/\" target=\"_blank\"> https://www.bsb.by/about/about_bank/ </a>. </p> <p> Replenishment and withdrawal of funds from a fiat account in CryptoCourse is possible by bank transfer (including through the international interbank system SWIFT), as well as in cash at an ATM (after ordering a bank card CryptoCourse). </p>"
-        },
-        "item5": {
-            "title": "How can I get CryptoCourse card?",
-            "text": "<p>CryptoCourse card is now available to citizens of Belarus. You can order it in CryptoCourse app.  We are making every effort to have your CryptoCourse physical card delivered as soon as possible.</p>"
-        },
-        "item6": {
-            "title": "Why is it safe to store cryptocurrency with CryptoCourse?",
-            "text": "<p> CryptoCourse employs the latest digital asset storage methods based on Secure Multi-Party Computation (Secure Multi-Party Computation) technology. \nAccess to the CryptoCourse wallet is carried out using two independent keys: </p> <p> - The first key is known only to the user, ensuring the impossibility of performing transactions with the user's assets without his consent. \nUnlike cryptocurrency exchanges and exchangers <strong> the CryptoCourse service, its employees and partners do not have access to the keys and user funds </strong>! </p> <p> - The second key is stored in a secure environment on the side of the service using the best \npractices in the field of cybersecurity, allowing CryptoCourse to guarantee the safety of funds even in the event of theft of the user's key. </p> <p> The user can also additionally use the Bank-Garant function, which provides backup storage of keys on the side of the Partner Bank and the ability to transfer access to \ninherited digital assets. </p>"
-        },
-        "title": "Frequently Asked Questions"
-    },
-    "section-block": {
-        "block1": {
-            "text": "CryptoCourse is a crypto wallet created as a result of cooperation between BSB Bank and Currency.com. \nWith CryptoCourse the purchase and sale of Bitcoin and other cryptocurrencies becomes as simple and accessible as transactions with Dollar or Euro.",
-            "title": "Buy and sell cryptocurrency legally"
-        },
-        "block2": {
-            "text": "CryptoCourse wallet is the optimal solution for regular transactions with cryptocurrencies and tokens and their long-term storage.",
-            "title": "Store cryptocurrency in your own wallet"
-        },
-        "block3": {
-            "text": "Your fiat balance in the CryptoCourse App is a real bank account under your name. \nCryptoCourse doesn’t keep your money and entrusts this important function to the bank.",
-            "title": "Your funds are under reliable bank protection"
-        },
-        "block4": {
-            "text": "Order CryptoCourse debit card linked to your account in the App and pay for the purchases as well as receive cash in ATMs around the world.",
-            "title": "First cryptoсard in Eastern Europe"
-        }
+    "tomorrow": {
+      "item1": "Gray, opaque services",
+      "item2": "Purchase/sale of cryptocurrency for cash/transfers through payment systems",
+      "item3": "High conversion losses",
+      "item4": "Exchangers controlling your funds",
+      "item5": "Bank account blocking risk",
+      "title": "Yesterday"
     }
+  },
+  "news": {
+    "title": "Press about us"
+  },
+  "question": {
+    "item1": {
+      "text": "<p>CryptoCourse operates in accordance with Swiss law and the international recommendations of Financial Action Task Force (FATF).</p><p>Transactions with fiat are carried out in partnership with JSC «BSB Bank» on the basis of license No.7 from 18.09.2017 issued by the National Bank of the Republic of Belarus in accordance with the legislation of the Republic of Belarus.</p><p>Exchange transactions with cryptocurrency are carried out on a regulated cryptoplatform Currency.com. Currency Com Bel Limited Liability Company is a legal entity registered by the Minsk City Executive Committee on September 4, 2018 in the Republic of Belarus under registration number 193130368. Currency Com Bel Limited Liability is a resident of the High Technologies Park (the Republic of Belarus) and is authorised under the legislation of the Republic of Belarus to carry out virtual assets-related types of activity. Since Currency Com Bel Limited Liability Company has the status of a cryptoplatform operator within the meaning of the Decree of the President of the Republic of Belarus No.8 «On development of digital economy» dated December 21, 2017 we may refer the expression «cryptoexchange» («crypto exchange», «cryptocurrency exchange») to this legal entity and its activity.</p>",
+      "title": "What is the legal status of the CryptoCourse service?"
+    },
+    "item2": {
+      "title": "Citizens of which countries can become CryptoCourse users?",
+      "text": "CryptoCourse service is not available for residents of the following countries: Albania, Bahamas, Barbados, Bermuda, Botswana, Ghana, Jamaica, Mauritius, Myanmar, Nicaragua, Pakistan, Panama, Syria, Uganda, Yemen, Zimbabwe, Democratic People's Republic of Korea (DPRK) \n, Iran, United States of America."
+    },
+    "item3": {
+      "title": "How to open an account with CryptoCourse?",
+      "text": "<p> If you are a citizen of the Republic of Belarus, you need to register in the Application using the Interbank Identification System of the Republic of Belarus. </p>"
+    },
+    "item4": {
+      "title": "How does a fiat account at CryptoCourse work?",
+      "text": "<p> To work with fiat currencies, when registering in the CryptoCourse Application, the user opens a registered bank account. \nServices for working with fiat currencies are provided by CJSC &laquo;BSB Bank&raquo;. </p> <p> The complete safety of funds in your bank account is guaranteed by the state without any restrictions on the amount in accordance with the legislation of the Republic of Belarus. \nAgency for Guaranteed Reimbursement of Bank Deposits (Deposits) of Individuals: <a href=\"https://www.bsb.by/bank/adc/\" target=\"_blank\"> https://www.bsb.by/bank \n/ adc / </a> </p> <p> CJSC &laquo;BSB Bank&raquo; is a bank with 100% private Swiss capital, has been operating in the banking services market since 2002. \nMore information about the bank: <a href=\"https://www.bsb.by/about/about_bank/\" target=\"_blank\"> https://www.bsb.by/about/about_bank/ </a>. </p> <p> Replenishment and withdrawal of funds from a fiat account in CryptoCourse is possible by bank transfer (including through the international interbank system SWIFT), as well as in cash at an ATM (after ordering a bank card CryptoCourse). </p>"
+    },
+    "item5": {
+      "title": "How can I get CryptoCourse card?",
+      "text": "<p>You can order CryptoCourse card on the app only. You need to complete the registration process and go through online identification on the app. Then you need to apply for the card issue, choose the currency and the method of delivery.</p>"
+    },
+    "item6": {
+      "title": "Why is it safe to store cryptocurrency with CryptoCourse?",
+      "text": "<p> CryptoCourse employs the latest digital asset storage methods based on Secure Multi-Party Computation (Secure Multi-Party Computation) technology. \nAccess to the CryptoCourse wallet is carried out using two independent keys: </p> <p> - The first key is known only to the user, ensuring the impossibility of performing transactions with the user's assets without his consent. \nUnlike cryptocurrency exchanges and exchangers <strong> the CryptoCourse service, its employees and partners do not have access to the keys and user funds </strong>! </p> <p> - The second key is stored in a secure environment on the side of the service using the best \npractices in the field of cybersecurity, allowing CryptoCourse to guarantee the safety of funds even in the event of theft of the user's key. </p> <p> The user can also additionally use the Bank-Garant function, which provides backup storage of keys on the side of the Partner Bank and the ability to transfer access to \ninherited digital assets. </p>"
+    },
+    "title": "Frequently Asked Questions",
+    "item7": {
+      "text": "<p> The CryptoCourse card is now available to citizens of Belarus.\n\nYou can order it in the CryptoCourse app.\n\nWe do our best to ensure that your physical CryptoCourse card is delivered as soon as possible. \n</p>",
+      "title": "How can I get a CryptoCourse card?"
+    }
+  },
+  "section-block": {
+    "block1": {
+      "text": "CryptoCourse is a crypto wallet created as a result of cooperation between BSB Bank and Currency.com. \nWith CryptoCourse the purchase and sale of Bitcoin and other cryptocurrencies becomes as simple and accessible as transactions with Dollar or Euro.",
+      "title": "Buy and sell cryptocurrency legally"
+    },
+    "block2": {
+      "text": "CryptoCourse wallet is the optimal solution for regular transactions with cryptocurrencies and tokens and their long-term storage.",
+      "title": "Store cryptocurrency in your own wallet"
+    },
+    "block3": {
+      "text": "Your fiat balance in the CryptoCourse App is a real bank account under your name. \nCryptoCourse doesn’t keep your money and entrusts this important function to the bank.",
+      "title": "Your funds are under reliable bank protection"
+    },
+    "block4": {
+      "text": "Order CryptoCourse debit card linked to your account in the App and pay for the purchases as well as receive cash in ATMs around the world.",
+      "title": "First cryptoсard in Eastern Europe"
+    }
+  }
 }

@@ -18,7 +18,8 @@
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12",
     "nuxt-i18n": "^6.20.4",
-    "vue-scrollto": "^2.20.0"
+    "vue-scrollto": "^2.20.0",
+    "vue-tiny-slider": "^0.1.39"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.12",

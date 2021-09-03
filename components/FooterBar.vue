@@ -12,7 +12,15 @@
             target="_blank"
             >{{ $t("footer.politics") }}</a
           >
-          <nuxt-link to="#">{{ $t("footer.rules") }}</nuxt-link>
+          <nuxt-link
+            :to="
+              $i18n.locale == 'ru'
+                ? 'Terms_of_use_ru.pdf'
+                : 'Terms_of_use_en.pdf'
+            "
+            target="_blank"
+            >{{ $t("footer.rules") }}</nuxt-link
+          >
         </div>
         <div class="footer__top-right">
           <svg

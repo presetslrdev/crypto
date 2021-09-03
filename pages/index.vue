@@ -12,7 +12,12 @@
         </div>
       </div>
     </div>
-    <div class="block-info" id="about">
+    <div
+      class="block-info"
+      id="about"
+      v-if="windowWidth >= 992"
+      controls="false"
+    >
       <div class="block-info__wrapper container">
         <div class="block" data-animation data-animation-loop>
           <div class="icon">
@@ -48,12 +53,7 @@
           </div>
           <div class="text">{{ $t("info-block.block2") }}</div>
         </div>
-        <div
-          class="block"
-          data-animation
-          data-animation-loop
-          style="padding-right: 5px"
-        >
+        <div class="block" data-animation data-animation-loop>
           <div class="icon">
             <svg
               width="40"
@@ -62,17 +62,10 @@
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0)">
-                <path
-                  d="M33.3333 4H6.66667C4.81667 4 3.35 6.0025 3.35 8.5L3.33334 35.5C3.33334 37.9975 4.81667 40 6.66667 40H33.3333C35.1833 40 36.6667 37.9975 36.6667 35.5V8.5C36.6667 6.0025 35.1833 4 33.3333 4ZM33.3333 35.5H6.66667L6.5 22H20H33.3333V35.5ZM33.3333 14H20H6.5L6.66667 8.5H33.3333V14Z"
-                  fill="#E31E24"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0">
-                  <rect width="40" height="40" fill="white" />
-                </clipPath>
-              </defs>
+              <path
+                d="M33.3333 4H6.66667C4.81667 4 3.35 6.0025 3.35 8.5L3.33334 35.5C3.33334 37.9975 4.81667 40 6.66667 40H33.3333C35.1833 40 36.6667 37.9975 36.6667 35.5V8.5C36.6667 6.0025 35.1833 4 33.3333 4ZM33.3333 35.5H6.66667L6.5 22H20H33.3333V35.5ZM33.3333 14H20H6.5L6.66667 8.5H33.3333V14Z"
+                fill="#E31E24"
+              />
             </svg>
           </div>
           <div class="text">{{ $t("info-block.block3") }}</div>
@@ -96,58 +89,157 @@
         </div>
       </div>
     </div>
+    <div class="mobile_block-info block-info" v-else>
+      <client-only>
+        <vue-tiny-slider
+          :mouse-drag="false"
+          :loop="true"
+          :autoplay="true"
+          items="1"
+          gutter="0"
+        >
+          <div class="block">
+            <div class="icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.6667 13.3333H23.3333V18.3333H18.3333V21.6667H23.3333V26.6667H26.6667V21.6667H31.6667V18.3333H26.6667V13.3333ZM3.33333 20C3.33333 15.35 6.06667 11.3333 10.0167 9.46667V5.86667C4.2 7.93333 0 13.4833 0 20C0 26.5167 4.2 32.0667 10.0167 34.1333V30.5333C6.06667 28.6667 3.33333 24.65 3.33333 20ZM25 5C16.7333 5 10 11.7333 10 20C10 28.2667 16.7333 35 25 35C33.2667 35 40 28.2667 40 20C40 11.7333 33.2667 5 25 5ZM25 31.6667C18.5667 31.6667 13.3333 26.4333 13.3333 20C13.3333 13.5667 18.5667 8.33333 25 8.33333C31.4333 8.33333 36.6667 13.5667 36.6667 20C36.6667 26.4333 31.4333 31.6667 25 31.6667Z"
+                  fill="#E31E24"
+                />
+              </svg>
+            </div>
+            <div class="text">{{ $t("info-block.block1") }}</div>
+          </div>
+          <div class="block">
+            <div class="icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M29.4333 15.8834L17.65 27.6667L10.5833 20.6001L12.9333 18.2501L17.65 22.9667L27.0833 13.5334L29.4333 15.8834ZM6.66668 20.0001C6.66668 16.1167 8.36668 12.6334 11.0333 10.2001L15 14.1667V4.16675H5.00001L8.66668 7.83341C5.40001 10.8667 3.33334 15.1834 3.33334 20.0001C3.33334 28.6501 9.91668 35.7501 18.3333 36.5834V33.2167C11.7667 32.4001 6.66668 26.7834 6.66668 20.0001ZM36.6667 20.0001C36.6667 11.3501 30.0833 4.25008 21.6667 3.41675V6.78342C28.2333 7.60008 33.3333 13.2167 33.3333 20.0001C33.3333 23.8834 31.6333 27.3667 28.9667 29.8001L25 25.8334V35.8334H35L31.3333 32.1667C34.6 29.1334 36.6667 24.8167 36.6667 20.0001Z"
+                  fill="#E31E24"
+                />
+              </svg>
+            </div>
+            <div class="text">{{ $t("info-block.block2") }}</div>
+          </div>
+          <div class="block">
+            <div class="icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M33.3333 4H6.66667C4.81667 4 3.35 6.0025 3.35 8.5L3.33334 35.5C3.33334 37.9975 4.81667 40 6.66667 40H33.3333C35.1833 40 36.6667 37.9975 36.6667 35.5V8.5C36.6667 6.0025 35.1833 4 33.3333 4ZM33.3333 35.5H6.66667L6.5 22H20H33.3333V35.5ZM33.3333 14H20H6.5L6.66667 8.5H33.3333V14Z"
+                  fill="#E31E24"
+                />
+              </svg>
+            </div>
+            <div class="text">{{ $t("info-block.block3") }}</div>
+          </div>
+          <div class="block">
+            <div class="icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 1.66663L5 8.33329V18.3333C5 27.5833 11.4 36.2333 20 38.3333C28.6 36.2333 35 27.5833 35 18.3333V8.33329L20 1.66663ZM16.6667 28.3333L10 21.6666L12.35 19.3166L16.6667 23.6166L27.65 12.6333L30 15L16.6667 28.3333Z"
+                  fill="#E31E24"
+                />
+              </svg>
+            </div>
+            <div class="text">{{ $t("info-block.block4") }}</div>
+          </div>
+        </vue-tiny-slider>
+      </client-only>
+    </div>
     <section class="section-info" id="benefits">
       <div class="section-info__wrapper container">
-        <div class="section-info__item" data-animation>
-          <div class="text">
-            <h2 v-html="$t('section-block.block1.title')"></h2>
-            <div
-              class="text-wrapper"
-              v-html="parceText($t('section-block.block1.text'))"
-            ></div>
-          </div>
-          <div class="images">
-            <img src="/image/section-item1.png" alt="image" />
-          </div>
-        </div>
-        <div class="section-info__item" data-animation>
-          <div class="text">
-            <h2 v-html="$t('section-block.block2.title')"></h2>
-            <div
-              class="text-wrapper"
-              v-html="parceText($t('section-block.block2.text'))"
-            ></div>
-          </div>
-          <div class="images">
-            <img src="/image/section-item2.png" alt="image" />
-          </div>
-        </div>
-        <div class="section-info__item" data-animation>
-          <div class="text">
-            <h2 v-html="$t('section-block.block3.title')"></h2>
-            <div
-              class="text-wrapper"
-              v-html="parceText($t('section-block.block3.text'))"
-            ></div>
-          </div>
-          <div class="images">
-            <img src="/image/section-item3.png" alt="image" />
-          </div>
-        </div>
-        <div class="section-info__item" data-animation>
-          <div class="text">
-            <h2 v-html="$t('section-block.block4.title')"></h2>
-            <div
-              class="text-wrapper"
-              v-html="parceText($t('section-block.block4.text'))"
-            ></div>
-            <div class="btn-wrapper">
-              <btn :type="'card'">{{ $t("btn.text2") }}</btn>
+        <div class="section-info__list">
+          <div class="section-info__item" data-animation>
+            <div class="text">
+              <h2 v-html="$t('section-block.block1.title')"></h2>
+              <div
+                class="text-wrapper"
+                v-html="parceText($t('section-block.block1.text'))"
+              ></div>
+            </div>
+            <div class="images">
+              <img
+                :src="
+                  $i18n.locale == 'ru'
+                    ? '/image/section-item1.png'
+                    : '/image/section-item1_en.png'
+                "
+                alt="image"
+              />
             </div>
           </div>
-          <div class="images images-card">
-            <img src="/image/section-item4.png" alt="image" />
+          <div class="section-info__item" data-animation>
+            <div class="text">
+              <h2 v-html="$t('section-block.block2.title')"></h2>
+              <div
+                class="text-wrapper"
+                v-html="parceText($t('section-block.block2.text'))"
+              ></div>
+            </div>
+            <div class="images">
+              <img
+                :src="
+                  $i18n.locale == 'ru'
+                    ? '/image/section-item2.png'
+                    : '/image/section-item2_en.png'
+                "
+                alt="image"
+              />
+            </div>
           </div>
+          <div class="section-info__item" data-animation>
+            <div class="text">
+              <h2 v-html="$t('section-block.block3.title')"></h2>
+              <div
+                class="text-wrapper"
+                v-html="parceText($t('section-block.block3.text'))"
+              ></div>
+            </div>
+            <div class="images">
+              <img src="/image/section-item3.png" alt="image" />
+            </div>
+          </div>
+          <div class="section-info__item" data-animation>
+            <div class="text">
+              <h2 v-html="$t('section-block.block4.title')"></h2>
+              <div
+                class="text-wrapper"
+                v-html="parceText($t('section-block.block4.text'))"
+              ></div>
+              <nuxt-link to="/about-card" class="more">{{
+                $t("btn.text-about")
+              }}</nuxt-link>
+            </div>
+            <div class="images images-card">
+              <img src="/image/section-item4.png" alt="image" />
+            </div>
+          </div>
+        </div>
+        <div class="btn-wrapper">
+          <btn :type="'card'">{{ $t("btn.text2") }}</btn>
         </div>
       </div>
     </section>
@@ -164,17 +256,10 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0)">
-                  <path
-                    d="M7.25463 17.5598C7.83669 18.1489 9.13308 17.9536 9.27266 17.0273C10.1411 11.2761 14.4867 6.42422 17.7752 1.85228C18.687 0.585349 16.5904 -0.618196 15.6904 0.633658C12.6854 4.81111 8.89775 9.20686 7.41598 14.276C5.72267 12.5455 4.02253 10.8314 2.12334 9.3107C0.920585 8.34728 -0.799899 10.0446 0.415822 11.0181C2.89023 13.0001 5.0286 15.3113 7.25463 17.5598Z"
-                    fill="#43465D"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0">
-                    <rect width="18" height="18" fill="white" />
-                  </clipPath>
-                </defs>
+                <path
+                  d="M7.25463 17.5598C7.83669 18.1489 9.13308 17.9536 9.27266 17.0273C10.1411 11.2761 14.4867 6.42422 17.7752 1.85228C18.687 0.585349 16.5904 -0.618196 15.6904 0.633658C12.6854 4.81111 8.89775 9.20686 7.41598 14.276C5.72267 12.5455 4.02253 10.8314 2.12334 9.3107C0.920585 8.34728 -0.799899 10.0446 0.415822 11.0181C2.89023 13.0001 5.0286 15.3113 7.25463 17.5598Z"
+                  fill="#43465D"
+                />
               </svg>
 
               {{ $t("app.list.item1") }}
@@ -187,17 +272,10 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0)">
-                  <path
-                    d="M7.25463 17.5598C7.83669 18.1489 9.13308 17.9536 9.27266 17.0273C10.1411 11.2761 14.4867 6.42422 17.7752 1.85228C18.687 0.585349 16.5904 -0.618196 15.6904 0.633658C12.6854 4.81111 8.89775 9.20686 7.41598 14.276C5.72267 12.5455 4.02253 10.8314 2.12334 9.3107C0.920585 8.34728 -0.799899 10.0446 0.415822 11.0181C2.89023 13.0001 5.0286 15.3113 7.25463 17.5598Z"
-                    fill="#43465D"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0">
-                    <rect width="18" height="18" fill="white" />
-                  </clipPath>
-                </defs>
+                <path
+                  d="M7.25463 17.5598C7.83669 18.1489 9.13308 17.9536 9.27266 17.0273C10.1411 11.2761 14.4867 6.42422 17.7752 1.85228C18.687 0.585349 16.5904 -0.618196 15.6904 0.633658C12.6854 4.81111 8.89775 9.20686 7.41598 14.276C5.72267 12.5455 4.02253 10.8314 2.12334 9.3107C0.920585 8.34728 -0.799899 10.0446 0.415822 11.0181C2.89023 13.0001 5.0286 15.3113 7.25463 17.5598Z"
+                  fill="#43465D"
+                />
               </svg>
 
               {{ $t("app.list.item2") }}
@@ -210,17 +288,10 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0)">
-                  <path
-                    d="M7.25463 17.5598C7.83669 18.1489 9.13308 17.9536 9.27266 17.0273C10.1411 11.2761 14.4867 6.42422 17.7752 1.85228C18.687 0.585349 16.5904 -0.618196 15.6904 0.633658C12.6854 4.81111 8.89775 9.20686 7.41598 14.276C5.72267 12.5455 4.02253 10.8314 2.12334 9.3107C0.920585 8.34728 -0.799899 10.0446 0.415822 11.0181C2.89023 13.0001 5.0286 15.3113 7.25463 17.5598Z"
-                    fill="#43465D"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0">
-                    <rect width="18" height="18" fill="white" />
-                  </clipPath>
-                </defs>
+                <path
+                  d="M7.25463 17.5598C7.83669 18.1489 9.13308 17.9536 9.27266 17.0273C10.1411 11.2761 14.4867 6.42422 17.7752 1.85228C18.687 0.585349 16.5904 -0.618196 15.6904 0.633658C12.6854 4.81111 8.89775 9.20686 7.41598 14.276C5.72267 12.5455 4.02253 10.8314 2.12334 9.3107C0.920585 8.34728 -0.799899 10.0446 0.415822 11.0181C2.89023 13.0001 5.0286 15.3113 7.25463 17.5598Z"
+                  fill="#43465D"
+                />
               </svg>
 
               {{ $t("app.list.item3") }}
@@ -231,7 +302,14 @@
           </div>
         </div>
         <div class="app__right">
-          <img src="/image/app-img.png" alt="image" />
+          <img
+            :src="
+              $i18n.locale == 'ru'
+                ? '/image/app-img.png'
+                : '/image/app-img_en.png'
+            "
+            alt="image"
+          />
         </div>
       </div>
     </section>
@@ -485,6 +563,7 @@ import i18n from "nuxt-i18n";
 export default Vue.extend({
   data() {
     return {
+      windowWidth: 1200,
       questions: [
         {
           head: this.$i18n.t("question.item1.title"),
@@ -515,6 +594,9 @@ export default Vue.extend({
     };
   },
   methods: {
+    setWindowWidth() {
+      this.windowWidth = window.innerWidth;
+    },
     parceText(text: string) {
       return "<p>" + text.replace("\n", "</p><p>") + "</p>";
     },
@@ -549,15 +631,30 @@ export default Vue.extend({
   },
   mounted() {
     this.$nextTick(() => {
-      this.blockAnimation();
+      window.addEventListener("resize", this.setWindowWidth);
+      this.setWindowWidth();
+      console.log(this.windowWidth);
+      if (this.windowWidth >= 992) {
+        this.blockAnimation();
+      } else {
+        let targetArray = Array.from(
+          document.querySelectorAll("[data-animation]")
+        ) as any;
+        targetArray.forEach((target: any) => {
+          target.classList.add("animated");
+        });
+      }
     });
   },
 });
 </script>
 
 <style lang="scss">
+@import "tiny-slider/src/tiny-slider";
+
 .first-screen {
   height: calc(100vh + 300px);
+  min-height: 1000px;
   background: url("/image/first-screen__bg.jpg") no-repeat;
   background-size: cover, 100%;
   background-position: center;
@@ -660,60 +757,61 @@ export default Vue.extend({
     }
   }
   @include media(mobile-xl) {
-    // h1 {
-    //   font-size: 36px;
-    // }
+    h1 {
+      font-size: 41px;
+      line-height: 41px;
+    }
   }
 }
 .block-info {
+  .block {
+    width: 100%;
+    max-width: 282px;
+    padding: 30px;
+    background: #fff;
+    filter: drop-shadow(10px 4px 30px rgba(0, 0, 0, 0.1));
+    border-radius: 15px;
+    transition: opacity 1s, transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform-origin: center;
+    opacity: 0.5;
+    transform: scale(0.8);
+    &.animated {
+      transform: scale(1);
+      opacity: 1;
+    }
+    &:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+    &:nth-child(3) {
+      transition-delay: 0.4s;
+    }
+    &:nth-child(4) {
+      transition-delay: 0.6s;
+    }
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+    .icon {
+      height: 40px;
+      svg {
+        height: 100%;
+        display: block;
+      }
+    }
+    .text {
+      font-family: $roboto;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 34px;
+      color: #43465d;
+      margin-top: 12px;
+    }
+  }
   &__wrapper {
     display: flex;
     justify-content: space-between;
     position: relative;
-    top: -20px;
-    .block {
-      width: 100%;
-      max-width: 282px;
-      padding: 30px;
-      background: #fff;
-      filter: drop-shadow(10px 4px 30px rgba(0, 0, 0, 0.04));
-      border-radius: 15px;
-      transition: opacity 1s, transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
-      transform-origin: center;
-      opacity: 0.5;
-      transform: scale(0.8);
-      &.animated {
-        transform: scale(1);
-        opacity: 1;
-      }
-      &:nth-child(2) {
-        transition-delay: 0.2s;
-      }
-      &:nth-child(3) {
-        transition-delay: 0.4s;
-      }
-      &:nth-child(4) {
-        transition-delay: 0.6s;
-      }
-      &:not(:last-child) {
-        margin-right: 15px;
-      }
-      .icon {
-        height: 40px;
-        svg {
-          height: 100%;
-          display: block;
-        }
-      }
-      .text {
-        font-family: $roboto;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 34px;
-        color: #43465d;
-        margin-top: 12px;
-      }
-    }
+    top: -40px;
     @include media(laptop) {
       flex-wrap: wrap;
       justify-content: flex-start;
@@ -750,15 +848,99 @@ export default Vue.extend({
     }
   }
 }
+.mobile_block-info {
+  position: relative;
+  top: -120px;
+  button[data-action="stop"],
+  button[data-action="start"] {
+    display: none;
+  }
+  .tns-controls {
+    display: none;
+  }
+  #tns1-iw {
+    width: 100%;
+    padding: 20px;
+  }
+  .block {
+    opacity: 1;
+    transform: scale(1);
+    max-width: 100%;
+    margin-right: 10px;
+    min-height: 180px;
+    &:not(:last-child) {
+      margin-right: 0px;
+    }
+  }
+  .tns-nav {
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    button {
+      transition: 0.5s;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      border: none;
+      display: block;
+      margin-right: 10px;
+      padding: 0 0;
+      &.tns-nav-active {
+        background: rgb(227, 30, 36);
+      }
+    }
+  }
+}
 .section-info {
   margin-top: 145px;
+  .btn-wrapper {
+    margin-top: 25px;
+    .btn {
+      margin: 0 auto;
+    }
+    a {
+      min-height: 66px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+    }
+  }
   &__item {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 160px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
     &:nth-child(even) {
       flex-direction: row-reverse;
+    }
+    .more {
+      box-shadow: none;
+      padding: 0 0;
+      min-height: auto;
+      color: #43465d;
+      font-size: 24px;
+      font-family: "Nunito", sans-serif;
+      text-align: left;
+      display: inline-block;
+      margin-top: 25px;
+      text-decoration: none;
+      position: relative;
+      &:before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        display: block;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        background: #43465d;
+      }
     }
     .text {
       width: 100%;
@@ -800,17 +982,40 @@ export default Vue.extend({
       //     line-height: 28px;
       //   }
       // }
+
       .btn-wrapper {
         margin-top: 25px;
         width: 100%;
-        max-width: 300px;
+
         transition: 0.6s;
         opacity: 0;
         transform: translateY(-40px);
         transition-delay: 0.8s;
+        display: flex;
+        align-items: center;
+
+        .btn {
+          &:not(:first-child) {
+            margin-left: 10px;
+          }
+        }
+        @include media(mobile-xxxl) {
+          flex-direction: column;
+          align-items: flex-start;
+          .btn {
+            width: 100%;
+            &:not(:first-child) {
+              margin-left: 0px;
+              margin-top: 10px;
+            }
+          }
+        }
         a {
+          min-height: 66px;
+
           @include media(tablet) {
             min-width: auto;
+            width: 100%;
           }
           padding: 20px 40px;
           box-shadow: 0px 14px 30px rgba(227, 30, 36, 0.25);
@@ -825,6 +1030,13 @@ export default Vue.extend({
         width: 100%;
         max-width: 550px;
         margin-right: 20px;
+        .btn {
+          margin: 0 auto;
+        }
+        a {
+          margin: 0 auto;
+          height: 66px;
+        }
         @include media(tablet) {
           margin-right: 0px;
         }
@@ -864,11 +1076,22 @@ export default Vue.extend({
       &:nth-child(even) {
         flex-direction: column;
       }
+      .images {
+        opacity: 1;
+      }
+      .text {
+        h2,
+        p,
+        .btn-wrapper {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     }
   }
   @include media(mobile-xxl) {
     overflow: hidden;
-    margin-top: 50px;
+    margin-top: 0px;
     &__item {
       margin-bottom: 50px;
       &:nth-child(1) {
@@ -876,13 +1099,13 @@ export default Vue.extend({
           width: 600px;
         }
       }
-      &:nth-child(3) {
-        .images {
-          width: 560px;
-          left: 120px;
-          position: relative;
-        }
-      }
+      // &:nth-child(3) {
+      //   .images {
+      //     width: 560px;
+      //     left: 120px;
+      //     position: relative;
+      //   }
+      // }
     }
   }
 }
@@ -953,7 +1176,7 @@ export default Vue.extend({
       max-width: 100%;
     }
   }
-  @include media(mobile-xxl) {
+  @include media(mobile-xxxl) {
     margin: 50px 0px;
     &__left {
       padding: 100px 0px;
@@ -964,14 +1187,14 @@ export default Vue.extend({
     ul li {
       font-size: 18px;
       line-height: 28px;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
+      // text-align: center;
       svg {
-        margin-right: 0px;
-        margin-top: 0px;
-        margin-bottom: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 0px;
       }
     }
     .btn-wrapper {
@@ -1011,6 +1234,13 @@ export default Vue.extend({
       transition-delay: 0.6s;
     }
     &.animated {
+      h2,
+      p {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @include media(tablet) {
       h2,
       p {
         opacity: 1;
@@ -1063,6 +1293,8 @@ export default Vue.extend({
         }
         @include media(tablet) {
           max-width: 100%;
+          opacity: 1;
+          transform: scale(1);
         }
         svg {
           min-width: 24px;
@@ -1154,6 +1386,10 @@ export default Vue.extend({
     transition: 0.6s cubic-bezier(0.11, 0.54, 0, 1.01);
     opacity: 0;
     transform: translateY(-40px);
+    @include media(tablet) {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   @include media(mobile-xxl) {
     margin-top: 50px;
@@ -1171,6 +1407,10 @@ export default Vue.extend({
         opacity: 1;
         transform: translateY(0);
       }
+    }
+    @include media(tablet) {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
   h2 {

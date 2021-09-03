@@ -21,7 +21,7 @@ export default {
         scss: ["~/assets/scss/common.scss"]
     },
 
-    plugins: [],
+    plugins: [{ src: '~/plugins/tiny-slider.js', mode: 'client'}],
     components: true,
     buildModules: [
         '@nuxt/typescript-build'

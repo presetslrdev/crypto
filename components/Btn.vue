@@ -1,6 +1,6 @@
 <template>
   <div class="btn">
-    <nuxt-link to="/">
+    <nuxt-link :to="to">
       <svg
         class="card"
         v-if="type == 'card'"
@@ -42,12 +42,17 @@ export default Vue.extend({
       required: false,
       default: false,
     },
+    to: {
+      type: String,
+      default: "#",
+    },
   },
 });
 </script>
 
 <style scoped lang="scss">
 .btn {
+  max-width: 300px;
   a {
     display: flex;
     align-items: center;
@@ -82,6 +87,9 @@ export default Vue.extend({
           fill: #e31e24;
         }
       }
+    }
+    @include media(mobile-xxl) {
+      font-size: 15px;
     }
   }
 }
