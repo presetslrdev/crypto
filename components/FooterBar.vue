@@ -36,7 +36,7 @@
             />
           </svg>
 
-          <a href="mailto: info@cryptocourse.app">info@cryptocourse.app</a>
+          <a href="mailto:support@cryptocourse.app">support@cryptocourse.app</a>
         </div>
       </div>
       <div class="footer__bottom" v-if="false">
@@ -84,6 +84,22 @@ export default Vue.extend({});
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
+    &-right {
+      @include media(tablet) {
+        margin-top: 20px;
+      }
+      svg {
+        display: block;
+        width: 20px;
+        height: 20px;
+      }
+      svg path {
+        fill: #6f6f6f;
+      }
+      a {
+        color: #6f6f6f !important;
+      }
+    }
     a {
       text-decoration: none;
       font-family: $roboto;
@@ -228,6 +244,7 @@ export default Vue.extend({});
   @include media(mobile-xxl) {
     &__top {
       flex-direction: column;
+
       &-left {
         margin-bottom: 10px;
       }

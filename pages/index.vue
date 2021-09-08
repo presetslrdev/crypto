@@ -89,7 +89,7 @@
         </div>
       </div>
     </div>
-    <div class="mobile_block-info block-info" v-else>
+    <div class="mobile_block-info block-info" id="about" v-else>
       <client-only>
         <vue-tiny-slider
           :mouse-drag="false"
@@ -593,6 +593,36 @@ export default Vue.extend({
       ],
     };
   },
+  head() {
+    return {
+      meta: [
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content:
+            "CryptoCourse: криптокошелёк и банковская карта в одном приложении",
+        },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content:
+            "Простое и удобное приложение для управления собственными криптокошельками. Закажите банковскую карту CryptoCourse и получите прямой доступ к сделкам с криптовалютой.",
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content:
+            "CryptoCourse: криптокошелёк и банковская карта в одном приложении",
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content:
+            "Простое и удобное приложение для управления собственными криптокошельками. Закажите банковскую карту CryptoCourse и получите прямой доступ к сделкам с криптовалютой.",
+        },
+      ],
+    };
+  },
   methods: {
     setWindowWidth() {
       this.windowWidth = window.innerWidth;
@@ -726,8 +756,8 @@ export default Vue.extend({
       padding: 0 0;
     }
     height: 100%;
-    min-height: 930px;
-    padding-top: 120px;
+    min-height: 800px;
+    padding-top: 0px;
     padding-bottom: 120px;
     display: flex;
     flex-direction: column;
@@ -744,7 +774,7 @@ export default Vue.extend({
       }
       .text {
         margin-left: 0px;
-        margin-top: 200px;
+        margin-top: 20px;
       }
     }
     h1 {
@@ -831,9 +861,9 @@ export default Vue.extend({
       top: -100px;
       .block {
         width: 100%;
-        margin-right: 0px;
+        margin-right: 10px;
         &:not(:last-child) {
-          margin-right: 0px;
+          margin-right: 10px;
         }
         &:nth-child(2) {
           transition-delay: 0s;
@@ -850,7 +880,7 @@ export default Vue.extend({
 }
 .mobile_block-info {
   position: relative;
-  top: -120px;
+  top: -250px;
   button[data-action="stop"],
   button[data-action="start"] {
     display: none;
@@ -859,27 +889,33 @@ export default Vue.extend({
     display: none;
   }
   #tns1-iw {
-    width: 100%;
+    width: 80%;
     padding: 20px;
   }
   .block {
     opacity: 1;
     transform: scale(1);
-    max-width: 100%;
     margin-right: 10px;
     min-height: 180px;
+    max-width: unset;
+    filter: none;
+    @include media(451px) {
+      min-height: 214px;
+    }
+    margin-right: 15px;
     &:not(:last-child) {
-      margin-right: 0px;
+      margin-right: 15px;
     }
   }
   .tns-nav {
     position: absolute;
     left: 0;
-    bottom: -40px;
+    bottom: -20px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+
     button {
       transition: 0.5s;
       border-radius: 50%;
@@ -889,9 +925,23 @@ export default Vue.extend({
       display: block;
       margin-right: 10px;
       padding: 0 0;
+      background: #efefef;
       &.tns-nav-active {
         background: rgb(227, 30, 36);
       }
+    }
+  }
+  @media only screen and (max-width: 361px) {
+    // top: -200px;
+    .block {
+      border: 1px solid #eee;
+      min-height: 250px;
+    }
+  }
+  @media only screen and (max-width: 321px) {
+    top: -200px;
+    .block {
+      border: 1px solid #eee;
     }
   }
 }
@@ -928,9 +978,12 @@ export default Vue.extend({
       font-family: "Nunito", sans-serif;
       text-align: left;
       display: inline-block;
-      margin-top: 25px;
+      margin-top: 5px;
       text-decoration: none;
       position: relative;
+      @include media(mobile-xl) {
+        font-size: 18px;
+      }
       &:before {
         content: "";
         width: 100%;
@@ -955,8 +1008,8 @@ export default Vue.extend({
         opacity: 0;
         transform: translateY(-40px);
         @include media(mobile-xl) {
-          font-size: 36px;
-          line-height: 46px;
+          font-size: 32px;
+          line-height: 34px;
         }
       }
       p {
@@ -968,10 +1021,15 @@ export default Vue.extend({
         opacity: 0;
         transform: translateY(-40px);
         transition-delay: 0.3s;
+        @include media(mobile-xl) {
+          font-size: 18px;
+          line-height: 28px;
+        }
         &:not(:last-child) {
           margin-bottom: 50px;
         }
       }
+
       // @include media(mobile-xxl) {
       //   h2 {
       //     font-size: 24px;
@@ -1071,7 +1129,7 @@ export default Vue.extend({
         max-width: 100%;
       }
       .images {
-        margin-top: 50px;
+        margin-top: 25px;
       }
       &:nth-child(even) {
         flex-direction: column;
@@ -1090,13 +1148,15 @@ export default Vue.extend({
     }
   }
   @include media(mobile-xxl) {
+    margin-top: -120px;
     overflow: hidden;
-    margin-top: 0px;
+    padding-bottom: 50px;
     &__item {
       margin-bottom: 50px;
+
       &:nth-child(1) {
         .images {
-          width: 600px;
+          width: 475px;
         }
       }
       // &:nth-child(3) {
@@ -1136,6 +1196,10 @@ export default Vue.extend({
       line-height: 46px;
       color: #43465d;
       margin-bottom: 30px;
+      @include media(tablet) {
+        font-size: 32px;
+        line-height: 34px;
+      }
     }
     ul {
       list-style-type: none;
@@ -1177,10 +1241,7 @@ export default Vue.extend({
     }
   }
   @include media(mobile-xxxl) {
-    margin: 50px 0px;
-    &__left {
-      padding: 100px 0px;
-    }
+    margin: 0px 0px;
     h2 {
       text-align: center;
     }
@@ -1201,6 +1262,15 @@ export default Vue.extend({
       margin: 0 auto;
     }
   }
+  @include media(tablet) {
+    min-height: auto;
+    &__wrapper {
+      min-height: auto;
+    }
+    &__left {
+      padding: 50px 0px;
+    }
+  }
 }
 .mission {
   &__head {
@@ -1216,6 +1286,10 @@ export default Vue.extend({
       transition: 0.6s cubic-bezier(0.11, 0.54, 0, 1.01);
       opacity: 0;
       transform: translateY(-40px);
+      @include media(tablet) {
+        font-size: 32px;
+        line-height: 34px;
+      }
     }
     p {
       width: 100%;
@@ -1232,6 +1306,10 @@ export default Vue.extend({
       opacity: 0;
       transform: translateY(-40px);
       transition-delay: 0.6s;
+      @include media(tablet) {
+        font-size: 18px;
+        line-height: 28px;
+      }
     }
     &.animated {
       h2,
@@ -1316,8 +1394,16 @@ export default Vue.extend({
       width: 100%;
     }
     &-red {
+      .title {
+        width: 100%;
+        max-width: 370px;
+        text-align: center;
+      }
       @include media(tablet) {
         margin-bottom: 50px;
+        .title {
+          text-align: center;
+        }
       }
       hr {
         border-top: 2px solid #e31e24;
@@ -1344,12 +1430,22 @@ export default Vue.extend({
           left: 0;
         }
       }
+      .title {
+        width: 100%;
+        max-width: 370px;
+      }
+      @include media(tablet) {
+        .title {
+          text-align: center;
+        }
+      }
       ul li svg {
         min-width: 14px;
       }
     }
   }
   @include media(mobile-xxl) {
+    margin-top: 50px;
     &__head {
       // h2 {
       //   font-size: 24px;
@@ -1389,6 +1485,8 @@ export default Vue.extend({
     @include media(tablet) {
       opacity: 1;
       transform: translateY(0);
+      font-size: 32px;
+      line-height: 34px;
     }
   }
   @include media(mobile-xxl) {

@@ -5,8 +5,8 @@ export default {
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: 'Crypto course' },
-            { hid: 'title', name: 'title', content: 'Crypto Course' }
+            { hid: 'description', name: 'description', content: 'Простое и удобное приложение для управления собственными криптокошельками. Закажите банковскую карту CryptoCourse и получите прямой доступ к сделкам с криптовалютой.' },
+            { hid: 'title', name: 'title', content: 'CryptoCourse: криптокошелёк и банковская карта в одном приложении' }
         ],
         link: [
             { rel: 'apple-touch-icon', type: 'image/x-icon', sizes: "180x180", href: '/apple-touch-icon.png' },

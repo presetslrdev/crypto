@@ -387,7 +387,7 @@ export default Vue.extend({
       width: 100%;
       top: 75px;
       opacity: 0;
-      height: calc(100vh - 75px);
+      height: calc(100vh - 120px);
       display: flex;
       flex-direction: column;
       justify-content: space-around;

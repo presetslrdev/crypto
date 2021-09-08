@@ -68,7 +68,7 @@
     },
     "item2": {
       "title": "Citizens of which countries can become CryptoCourse users?",
-      "text": "CryptoCourse service is not available for residents of the following countries: Albania, Bahamas, Barbados, Bermuda, Botswana, Ghana, Jamaica, Mauritius, Myanmar, Nicaragua, Pakistan, Panama, Syria, Uganda, Yemen, Zimbabwe, Democratic People's Republic of Korea (DPRK) \n, Iran, United States of America."
+      "text": "CryptoCourse service is not available for residents of the following countries: Albania, Bahamas, Barbados, Bermuda, Botswana, Ghana, Jamaica, Mauritius, Myanmar, Nicaragua, Pakistan, Panama, Syria, Uganda, Yemen, Zimbabwe, Democratic People's Republic of Korea (DPRK), Iran, United States of America."
     },
     "item3": {
       "title": "How to open an account with CryptoCourse?",
@@ -76,7 +76,7 @@
     },
     "item4": {
       "title": "How does a fiat account at CryptoCourse work?",
-      "text": "<p> To work with fiat currencies, when registering in the CryptoCourse Application, the user opens a registered bank account. \nServices for working with fiat currencies are provided by CJSC &laquo;BSB Bank&raquo;. </p> <p> The complete safety of funds in your bank account is guaranteed by the state without any restrictions on the amount in accordance with the legislation of the Republic of Belarus. \nAgency for Guaranteed Reimbursement of Bank Deposits (Deposits) of Individuals: <a href=\"https://www.bsb.by/bank/adc/\" target=\"_blank\"> https://www.bsb.by/bank \n/ adc / </a> </p> <p> CJSC &laquo;BSB Bank&raquo; is a bank with 100% private Swiss capital, has been operating in the banking services market since 2002. \nMore information about the bank: <a href=\"https://www.bsb.by/about/about_bank/\" target=\"_blank\"> https://www.bsb.by/about/about_bank/ </a>. </p> <p> Replenishment and withdrawal of funds from a fiat account in CryptoCourse is possible by bank transfer (including through the international interbank system SWIFT), as well as in cash at an ATM (after ordering a bank card CryptoCourse). </p>"
+      "text": "<p> To work with fiat currencies, when registering in the CryptoCourse Application, the user opens a registered bank account. \nServices for working with fiat currencies are provided by CJSC &laquo;BSB Bank&raquo;. </p> <p> The complete safety of funds in your bank account is guaranteed by the state without any restrictions on the amount in accordance with the legislation of the Republic of Belarus. \nAgency for Guaranteed Reimbursement of Bank Deposits (Deposits) of Individuals: <a href=\"https://www.bsb.by/bank/adc/\" target=\"_blank\"> https://www.bsb.by/bank/adc/</a>. </p> <p> CJSC &laquo;BSB Bank&raquo; is a bank with 100% private Swiss capital, has been operating in the banking services market since 2002. \nMore information about the bank: <a href=\"https://www.bsb.by/about/about_bank/\" target=\"_blank\"> https://www.bsb.by/about/about_bank/</a>. </p> <p> Replenishment and withdrawal of funds from a fiat account in CryptoCourse is possible by bank transfer (including through the international interbank system SWIFT), as well as in cash at an ATM (after ordering a bank card CryptoCourse). </p>"
     },
     "item5": {
       "title": "How can I get CryptoCourse card?",
@@ -84,7 +84,7 @@
     },
     "item6": {
       "title": "Why is it safe to store cryptocurrency with CryptoCourse?",
-      "text": "<p> CryptoCourse employs the latest digital asset storage methods based on Secure Multi-Party Computation (Secure Multi-Party Computation) technology. \nAccess to the CryptoCourse wallet is carried out using two independent keys: </p> <p> - The first key is known only to the user, ensuring the impossibility of performing transactions with the user's assets without his consent. \nUnlike cryptocurrency exchanges and exchangers <strong> the CryptoCourse service, its employees and partners do not have access to the keys and user funds </strong>! </p> <p> - The second key is stored in a secure environment on the side of the service using the best \npractices in the field of cybersecurity, allowing CryptoCourse to guarantee the safety of funds even in the event of theft of the user's key. </p> <p> The user can also additionally use the Bank-Garant function, which provides backup storage of keys on the side of the Partner Bank and the ability to transfer access to \ninherited digital assets. </p>"
+      "text": "<p> CryptoCourse employs the latest digital asset storage methods based on Secure Multi-Party Computation (Secure Multi-Party Computation) technology. \nAccess to the CryptoCourse wallet is carried out using two independent keys: </p> <p> - The first key is known only to the user, ensuring the impossibility of performing transactions with the user's assets without his consent. \nUnlike cryptocurrency exchanges and exchangers <strong> the CryptoCourse service, its employees and partners do not have access to the keys and user funds</strong>! </p> <p> - The second key is stored in a secure environment on the side of the service using the best \npractices in the field of cybersecurity, allowing CryptoCourse to guarantee the safety of funds even in the event of theft of the user's key. </p> <p> The user can also additionally use the Bank-Garant function, which provides backup storage of keys on the side of the Partner Bank and the ability to transfer access to \ninherited digital assets. </p>"
     },
     "title": "Frequently Asked Questions",
     "item7": {
@@ -94,7 +94,7 @@
   },
   "section-block": {
     "block1": {
-      "text": "CryptoCourse is a crypto wallet created as a result of cooperation between BSB Bank and Currency.com. \nWith CryptoCourse the purchase and sale of Bitcoin and other cryptocurrencies becomes as simple and accessible as transactions with Dollar or Euro.",
+      "text": "CryptoCourse is a crypto wallet created as a result of cooperation between BSB Bank and Currency.com. \nWith CryptoCourse the purchase and sale of Bitcoin and other cryptocurrencies becomes as simple and accessible as transactions with US Dollar or Euro.",
       "title": "Buy and sell cryptocurrency legally"
     },
     "block2": {
