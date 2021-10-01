@@ -68,7 +68,7 @@
     },
     "item2": {
       "title": "Citizens of which countries can become CryptoCourse users?",
-      "text": "CryptoCourse service is not available for residents of the following countries: Albania, Bahamas, Barbados, Bermuda, Botswana, Ghana, Jamaica, Mauritius, Myanmar, Nicaragua, Pakistan, Panama, Syria, Uganda, Yemen, Zimbabwe, Democratic People's Republic of Korea (DPRK), Iran, United States of America."
+      "text": "CryptoCourse is currently available to the citizens of the Republic of Belarus only. However, it will soon be available to citizens of other countries."
     },
     "item3": {
       "title": "How to open an account with CryptoCourse?",
@@ -90,12 +90,16 @@
     "item7": {
       "text": "<p> The CryptoCourse card is now available to citizens of Belarus.\n\nYou can order it in the CryptoCourse app.\n\nWe do our best to ensure that your physical CryptoCourse card is delivered as soon as possible. \n</p>",
       "title": "How can I get a CryptoCourse card?"
+    },
+    "item8": {
+      "text": "<p> The service is unable to onboard clients who are residents in the following countries: Albania, Bahamas, Barbados, Botswana, Cambodia, Ghana, Iceland, Jamaica, Mauritius, Mongolia, Myanmar, Nicaragua, Pakistan, Panama, Syria, Uganda, Yemen, Zimbabwe, Democratic People’s Republic of Korea (DPRK), Iran, the United States of America.</p>",
+      "title": "In which countries is CryptoCourse not available?"
     }
   },
   "section-block": {
     "block1": {
       "text": "CryptoCourse is a crypto wallet created as a result of cooperation between BSB Bank and Currency.com. \nWith CryptoCourse the purchase and sale of Bitcoin and other cryptocurrencies becomes as simple and accessible as transactions with US Dollar or Euro.",
-      "title": "Buy and sell cryptocurrency legally"
+      "title": "Buy and sell cryptocurrency easy"
     },
     "block2": {
       "text": "CryptoCourse wallet is the optimal solution for regular transactions with cryptocurrencies and tokens and their long-term storage.",

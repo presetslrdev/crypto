@@ -578,17 +578,21 @@ export default Vue.extend({
           content: this.$i18n.t("question.item3.text"),
         },
         {
-          head: this.$i18n.t("question.item4.title"),
-          content: this.$i18n.t("question.item4.text"),
+          head: this.$i18n.t("question.item5.title"),
+          content: this.$i18n.t("question.item5.text"),
         },
 
         {
-          head: this.$i18n.t("question.item5.title"),
-          content: this.$i18n.t("question.item5.text"),
+          head: this.$i18n.t("question.item4.title"),
+          content: this.$i18n.t("question.item4.text"),
         },
         {
           head: this.$i18n.t("question.item6.title"),
           content: this.$i18n.t("question.item6.text"),
+        },
+        {
+          head: this.$i18n.t("question.item8.title"),
+          content: this.$i18n.t("question.item8.text"),
         },
       ],
     };
@@ -1156,7 +1160,7 @@ export default Vue.extend({
 
       &:nth-child(1) {
         .images {
-          width: 475px;
+          // width: 475px;
         }
       }
       // &:nth-child(3) {
