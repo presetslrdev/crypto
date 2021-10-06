@@ -1,5 +1,5 @@
 <template>
-  <div class="btn">
+  <div class="btn" :class="{'narrow': narrow}">
     <nuxt-link :to="to">
       <svg
         class="card"
@@ -16,7 +16,7 @@
         />
       </svg>
 
-      <span><slot /></span>
+      <span><slot/></span>
       <svg
         class="downloads"
         v-if="type == 'downloads'"
@@ -26,33 +26,39 @@
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M19 9H15V3H9V9H5L12 16L19 9ZM5 18V20H19V18H5Z" fill="white" />
+        <path d="M19 9H15V3H9V9H5L12 16L19 9ZM5 18V20H19V18H5Z" fill="white"/>
       </svg>
     </nuxt-link>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
   props: {
     type: {
       type: String,
       required: false,
-      default: false,
+      // eslint-disable-next-line vue/require-valid-default-prop
+      default: false
     },
     to: {
       type: String,
-      default: "#",
+      default: '#',
     },
+    narrow: {
+      type: Boolean,
+      default: false,
+    }
   },
-});
+})
 </script>
 
 <style scoped lang="scss">
 .btn {
   max-width: 300px;
+
   a {
     display: flex;
     align-items: center;
@@ -68,19 +74,24 @@ export default Vue.extend({
     border-radius: 40px;
     background: #e31e24;
     box-shadow: 0px 14px 30px rgba(227, 30, 36, 0.25);
+
     svg path {
       transition: 0.3s;
     }
+
     .downloads {
       margin-left: 15px;
     }
+
     .card {
       margin-right: 10px;
     }
+
     &:hover {
       background: #fff;
       color: #e31e24;
       box-shadow: none;
+
       .downloads,
       .card {
         path {
@@ -88,9 +99,13 @@ export default Vue.extend({
         }
       }
     }
+
     @include media(mobile-xxl) {
       font-size: 15px;
     }
+  }
+  &.narrow {
+    max-width: 230px;
   }
 }
 </style>

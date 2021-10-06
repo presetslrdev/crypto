@@ -78,26 +78,29 @@
           <ul>
             <li>
               <nuxt-link
-                to="#"
+                to="/"
                 v-scroll-to="{
                   el: '#about',
                   offset: checkMobile ? -200 : -120,
                 }"
-                >{{ $t("header.about-service") }}</nuxt-link
+              >{{ $t('header.about-service') }}
+              </nuxt-link
               >
             </li>
             <li>
-              <nuxt-link to="#" v-scroll-to="'#benefits'">{{
-                $t("header.benefits")
-              }}</nuxt-link>
+              <nuxt-link to="/" v-scroll-to="'#benefits'">{{
+                  $t('header.benefits')
+                }}
+              </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="#" v-scroll-to="'#faq'">FAQ</nuxt-link>
+              <nuxt-link to="/" v-scroll-to="'#faq'">FAQ</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="#" v-scroll-to="'#contacts'">{{
-                $t("header.contacts")
-              }}</nuxt-link>
+              <nuxt-link to="/" v-scroll-to="'#contacts'">{{
+                  $t('header.contacts')
+                }}
+              </nuxt-link>
             </li>
           </ul>
           <div class="header__nav-bottom">
@@ -113,7 +116,7 @@
               </div>
             </div>
             <div class="header__btn">
-              <btn :type="'downloads'">{{ $t("btn.text") }}</btn>
+              <btn :type="'downloads'">{{ $t('btn.text') }}</btn>
             </div>
           </div>
         </nav>
@@ -131,7 +134,7 @@
           </div>
         </div>
         <div class="header__btn">
-          <btn :type="'downloads'">{{ $t("btn.text") }}</btn>
+          <btn :type="'downloads'">{{ $t('btn.text') }}</btn>
         </div>
         <div
           class="header__burger"
@@ -146,47 +149,47 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
-  data() {
+  data () {
     return {
       isScrolled: false,
       isOpen: false,
       isMobile: false,
-    };
+    }
   },
   methods: {
-    checkMobile() {
+    checkMobile () {
       if (window.innerWidth < 600) {
-        this.isMobile = true;
+        this.isMobile = true
       } else {
-        this.isMobile = false;
+        this.isMobile = false
       }
     },
-    checkScroll() {
-      const top = window.scrollY;
-      this.isOpen = false;
+    checkScroll () {
+      const top = window.scrollY
+      this.isOpen = false
       if (top > 200) {
-        this.isScrolled = true;
+        this.isScrolled = true
       } else {
-        this.isScrolled = false;
+        this.isScrolled = false
       }
     },
   },
-  mounted() {
+  mounted () {
     this.$nextTick(() => {
-      window.addEventListener("scroll", this.checkScroll);
-      window.addEventListener("resize", this.checkMobile);
-      this.checkMobile();
-      this.checkScroll();
-    });
+      window.addEventListener('scroll', this.checkScroll)
+      window.addEventListener('resize', this.checkMobile)
+      this.checkMobile()
+      this.checkScroll()
+    })
   },
-  beforeDestroy() {
-    window.removeEventListener("scroll", this.checkScroll);
-    window.removeEventListener("resize", this.checkMobile);
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.checkScroll)
+    window.removeEventListener('resize', this.checkMobile)
   },
-});
+})
 </script>
 
 <style scoped lang="scss">
@@ -199,15 +202,18 @@ export default Vue.extend({
   z-index: 999;
   transition: 0.3s;
   background: #fff;
+
   &.scrolled {
     box-shadow: 0px 2px 5px rgb(0 0 0 / 14%);
     height: 60px;
+
     .header__logo {
       svg {
         width: 150px;
       }
     }
   }
+
   &__burger {
     position: relative;
     width: 30px;
@@ -217,6 +223,7 @@ export default Vue.extend({
     @include media(laptop) {
       display: block;
     }
+
     span {
       display: block;
       width: 30px;
@@ -225,25 +232,31 @@ export default Vue.extend({
       position: absolute;
       left: 0;
       transition: 0.3s;
+
       &:nth-child(1) {
         top: 0;
       }
+
       &:nth-child(2) {
         top: 50%;
       }
+
       &:nth-child(3) {
         top: 100%;
       }
     }
+
     &.open {
       span {
         &:nth-child(1) {
           transform: rotate(45deg);
           top: 50%;
         }
+
         &:nth-child(2) {
           opacity: 0;
         }
+
         &:nth-child(3) {
           transform: rotate(-45deg);
           top: 50%;
@@ -251,6 +264,7 @@ export default Vue.extend({
       }
     }
   }
+
   &:after {
     content: "";
     position: fixed;
@@ -263,21 +277,25 @@ export default Vue.extend({
     opacity: 0;
     transition: 0.3s;
   }
+
   &.open {
     &:after {
       opacity: 1;
       height: 100vh;
     }
   }
+
   &__logo {
     svg {
       transition: 0.3s;
     }
   }
+
   &__left {
     display: flex;
     align-items: center;
   }
+
   &__wrapper {
     display: flex;
     align-items: center;
@@ -286,19 +304,23 @@ export default Vue.extend({
     position: relative;
     z-index: 1000;
   }
+
   &__right {
     display: flex;
     align-items: center;
   }
+
   &__langs {
     display: flex;
     align-items: center;
     margin-right: 24px;
+
     .lang {
       &:first-child {
         margin-right: 24px;
       }
     }
+
     a {
       text-decoration: none;
       font-family: $roboto;
@@ -307,34 +329,41 @@ export default Vue.extend({
       color: #43465d;
       transition: 0.3s;
       opacity: 0.6;
+
       &.active,
       &:hover {
         opacity: 1;
       }
     }
+
     @include media(700px) {
       display: none;
     }
   }
+
   &__btn {
     @include media(700px) {
       display: none;
     }
   }
+
   &__nav {
     margin-left: 80px;
     transition: 0.3s;
+
     ul {
       list-style-type: none;
       margin: 0 0;
       padding: 0 0;
       display: flex;
       align-items: center;
+
       li {
         &:not(:last-child) {
           margin-right: 40px;
         }
       }
+
       a {
         text-decoration: none;
         font-family: $roboto;
@@ -345,6 +374,7 @@ export default Vue.extend({
         transition: 0.3s;
         position: relative;
         text-transform: uppercase;
+
         &:before {
           content: "";
           width: 100%;
@@ -356,6 +386,7 @@ export default Vue.extend({
           bottom: 0;
           transition: 0.3s;
         }
+
         &:hover {
           &:before {
             width: 0;
@@ -363,6 +394,7 @@ export default Vue.extend({
             animation: link-animation 2s;
           }
         }
+
         @include media(mobile-xxl) {
           &:before {
             display: none;
@@ -370,6 +402,7 @@ export default Vue.extend({
         }
       }
     }
+
     @include media(700px, min) {
       .header__btn {
         display: none;
@@ -379,6 +412,7 @@ export default Vue.extend({
       }
     }
   }
+
   @include media(laptop) {
     &__nav {
       position: fixed;
@@ -392,18 +426,23 @@ export default Vue.extend({
       flex-direction: column;
       justify-content: space-around;
       visibility: hidden;
+
       &.open {
         opacity: 1;
         visibility: visible;
       }
+
       ul {
         flex-direction: column;
         justify-content: center;
+
         li {
           margin-bottom: 50px;
+
           &:not(:last-child) {
             margin-right: 0;
           }
+
           a {
             font-size: 36px;
           }
@@ -427,6 +466,7 @@ export default Vue.extend({
         justify-content: space-between;
         padding: 0px 50px;
       }
+
       ul {
         li {
           a {
@@ -435,12 +475,15 @@ export default Vue.extend({
           }
         }
       }
+
       .header__langs {
         display: flex;
+
         a {
           font-size: 24px;
         }
       }
+
       .header__btn {
         display: block;
       }
@@ -452,9 +495,11 @@ export default Vue.extend({
         flex-direction: column;
         padding: 0 0;
       }
+
       .header__langs {
         margin-bottom: 20px;
       }
+
       .header__btn {
         ::v-deep a {
           font-size: 18px;

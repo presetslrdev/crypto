@@ -6,7 +6,7 @@
           <h1 v-html="$t('first-screen.title')"></h1>
           <p v-html="$t('first-screen.subtitle')"></p>
           <div class="btn-wrapper">
-            <btn type="downloads">{{ $t("btn.text") }}</btn>
+            <btn type="downloads">{{ $t('btn.text') }}</btn>
             <div class="text" v-html="$t('first-screen.info')"></div>
           </div>
         </div>
@@ -34,7 +34,7 @@
               />
             </svg>
           </div>
-          <div class="text">{{ $t("info-block.block1") }}</div>
+          <div class="text">{{ $t('info-block.block1') }}</div>
         </div>
         <div class="block" data-animation data-animation-loop>
           <div class="icon">
@@ -51,7 +51,7 @@
               />
             </svg>
           </div>
-          <div class="text">{{ $t("info-block.block2") }}</div>
+          <div class="text">{{ $t('info-block.block2') }}</div>
         </div>
         <div class="block" data-animation data-animation-loop>
           <div class="icon">
@@ -68,7 +68,7 @@
               />
             </svg>
           </div>
-          <div class="text">{{ $t("info-block.block3") }}</div>
+          <div class="text">{{ $t('info-block.block3') }}</div>
         </div>
         <div class="block" data-animation data-animation-loop>
           <div class="icon">
@@ -85,7 +85,7 @@
               />
             </svg>
           </div>
-          <div class="text">{{ $t("info-block.block4") }}</div>
+          <div class="text">{{ $t('info-block.block4') }}</div>
         </div>
       </div>
     </div>
@@ -113,7 +113,7 @@
                 />
               </svg>
             </div>
-            <div class="text">{{ $t("info-block.block1") }}</div>
+            <div class="text">{{ $t('info-block.block1') }}</div>
           </div>
           <div class="block">
             <div class="icon">
@@ -130,7 +130,7 @@
                 />
               </svg>
             </div>
-            <div class="text">{{ $t("info-block.block2") }}</div>
+            <div class="text">{{ $t('info-block.block2') }}</div>
           </div>
           <div class="block">
             <div class="icon">
@@ -147,7 +147,7 @@
                 />
               </svg>
             </div>
-            <div class="text">{{ $t("info-block.block3") }}</div>
+            <div class="text">{{ $t('info-block.block3') }}</div>
           </div>
           <div class="block">
             <div class="icon">
@@ -164,7 +164,7 @@
                 />
               </svg>
             </div>
-            <div class="text">{{ $t("info-block.block4") }}</div>
+            <div class="text">{{ $t('info-block.block4') }}</div>
           </div>
         </vue-tiny-slider>
       </client-only>
@@ -219,7 +219,7 @@
               ></div>
             </div>
             <div class="images">
-              <img src="/image/section-item3.png" alt="image" />
+              <img src="/image/section-item3.png" alt="image"/>
             </div>
           </div>
           <div class="section-info__item" data-animation>
@@ -230,23 +230,24 @@
                 v-html="parceText($t('section-block.block4.text'))"
               ></div>
               <nuxt-link to="/about-card" class="more">{{
-                $t("btn.text-about")
-              }}</nuxt-link>
+                  $t('btn.text-about')
+                }}
+              </nuxt-link>
             </div>
             <div class="images images-card">
-              <img src="/image/section-item4.png" alt="image" />
+              <img src="/image/section-item4.png" alt="image"/>
             </div>
           </div>
         </div>
         <div class="btn-wrapper">
-          <btn :type="'card'">{{ $t("btn.text2") }}</btn>
+          <btn :type="'card'">{{ $t('btn.text2') }}</btn>
         </div>
       </div>
     </section>
     <section class="app">
       <div class="app__wrapper container">
         <div class="app__left">
-          <h2>{{ $t("app.title") }}</h2>
+          <h2>{{ $t('app.title') }}</h2>
           <ul>
             <li>
               <svg
@@ -262,7 +263,7 @@
                 />
               </svg>
 
-              {{ $t("app.list.item1") }}
+              {{ $t('app.list.item1') }}
             </li>
             <li>
               <svg
@@ -278,7 +279,7 @@
                 />
               </svg>
 
-              {{ $t("app.list.item2") }}
+              {{ $t('app.list.item2') }}
             </li>
             <li>
               <svg
@@ -294,11 +295,11 @@
                 />
               </svg>
 
-              {{ $t("app.list.item3") }}
+              {{ $t('app.list.item3') }}
             </li>
           </ul>
           <div class="btn-wrapper">
-            <btn :type="'downloads'">{{ $t("btn.text") }}</btn>
+            <btn :type="'downloads'">{{ $t('btn.text') }}</btn>
           </div>
         </div>
         <div class="app__right">
@@ -316,13 +317,13 @@
     <section class="mission">
       <div class="mission__wrapper container">
         <div class="mission__head" data-animation>
-          <h2>{{ $t("mission.title") }}</h2>
+          <h2>{{ $t('mission.title') }}</h2>
           <p v-html="$t('mission.subtitle')"></p>
         </div>
         <div class="mission__content">
           <div class="mission__item mission__item-red">
-            <div class="title">{{ $t("mission.tomorrow.title") }}</div>
-            <hr />
+            <div class="title">{{ $t('mission.tomorrow.title') }}</div>
+            <hr/>
             <ul>
               <li data-animation data-animation-loop>
                 <svg
@@ -337,7 +338,7 @@
                     fill="#E31E24"
                   />
                 </svg>
-                {{ $t("mission.tomorrow.item1") }}
+                {{ $t('mission.tomorrow.item1') }}
               </li>
               <li data-animation data-animation-loop>
                 <svg
@@ -352,7 +353,7 @@
                     fill="#E31E24"
                   />
                 </svg>
-                {{ $t("mission.tomorrow.item2") }}
+                {{ $t('mission.tomorrow.item2') }}
               </li>
               <li data-animation data-animation-loop>
                 <svg
@@ -367,7 +368,7 @@
                     fill="#E31E24"
                   />
                 </svg>
-                {{ $t("mission.tomorrow.item3") }}
+                {{ $t('mission.tomorrow.item3') }}
               </li>
               <li data-animation data-animation-loop>
                 <svg
@@ -382,7 +383,7 @@
                     fill="#E31E24"
                   />
                 </svg>
-                {{ $t("mission.tomorrow.item4") }}
+                {{ $t('mission.tomorrow.item4') }}
               </li>
               <li data-animation data-animation-loop>
                 <svg
@@ -397,15 +398,15 @@
                     fill="#E31E24"
                   />
                 </svg>
-                {{ $t("mission.tomorrow.item5") }}
+                {{ $t('mission.tomorrow.item5') }}
               </li>
             </ul>
           </div>
           <div class="mission__item mission__item-green">
             <div class="title">
-              {{ $t("mission.today.title") }}
+              {{ $t('mission.today.title') }}
             </div>
-            <hr />
+            <hr/>
             <ul>
               <li data-animation data-animation-loop>
                 <svg
@@ -421,7 +422,7 @@
                   />
                 </svg>
 
-                {{ $t("mission.today.item1") }}
+                {{ $t('mission.today.item1') }}
               </li>
               <li data-animation data-animation-loop>
                 <svg
@@ -437,7 +438,7 @@
                   />
                 </svg>
 
-                {{ $t("mission.today.item2") }}
+                {{ $t('mission.today.item2') }}
               </li>
               <li data-animation data-animation-loop>
                 <svg
@@ -453,7 +454,7 @@
                   />
                 </svg>
 
-                {{ $t("mission.today.item3") }}
+                {{ $t('mission.today.item3') }}
               </li>
               <li data-animation data-animation-loop>
                 <svg
@@ -469,7 +470,7 @@
                   />
                 </svg>
 
-                {{ $t("mission.today.item4") }}
+                {{ $t('mission.today.item4') }}
               </li>
               <li data-animation data-animation-loop>
                 <svg
@@ -485,7 +486,7 @@
                   />
                 </svg>
 
-                {{ $t("mission.today.item5") }}
+                {{ $t('mission.today.item5') }}
               </li>
             </ul>
           </div>
@@ -494,7 +495,7 @@
     </section>
     <section class="question" id="faq">
       <div class="question__wrapper container" data-animation>
-        <h2>{{ $t("question.title") }}</h2>
+        <h2>{{ $t('question.title') }}</h2>
         <div class="question__list">
           <custom-accordion
             v-for="(item, index) in questions"
@@ -506,7 +507,7 @@
     </section>
     <section class="news" v-if="false">
       <div class="news__wrapper container" data-animation>
-        <h2>{{ $t("news.title") }}</h2>
+        <h2>{{ $t('news.title') }}</h2>
         <div class="news__list">
           <a href="#" class="news__item" target="_blank">
             <div class="news__who">ТАСС</div>
@@ -545,10 +546,10 @@
     <div class="baner">
       <div class="baner__wrapper container">
         <div class="baner__content">
-          <h2>{{ $t("baner.title") }}</h2>
-          <p>{{ $t("baner.text") }}</p>
+          <h2>{{ $t('baner.title') }}</h2>
+          <p>{{ $t('baner.text') }}</p>
           <div class="btn-wrapper">
-            <btn :type="'downloads'">{{ $t("btn.text") }}</btn>
+            <btn :type="'downloads'">{{ $t('btn.text') }}</btn>
           </div>
         </div>
       </div>
@@ -557,130 +558,128 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import i18n from "nuxt-i18n";
+import Vue from 'vue'
+import i18n from 'nuxt-i18n'
 
 export default Vue.extend({
-  data() {
+  data () {
     return {
       windowWidth: 1200,
       questions: [
         {
-          head: this.$i18n.t("question.item1.title"),
-          content: this.$i18n.t("question.item1.text"),
+          head: this.$i18n.t('question.item1.title'),
+          content: this.$i18n.t('question.item1.text'),
         },
         {
-          head: this.$i18n.t("question.item2.title"),
-          content: this.$i18n.t("question.item2.text"),
+          head: this.$i18n.t('question.item2.title'),
+          content: this.$i18n.t('question.item2.text'),
         },
         {
-          head: this.$i18n.t("question.item3.title"),
-          content: this.$i18n.t("question.item3.text"),
+          head: this.$i18n.t('question.item3.title'),
+          content: this.$i18n.t('question.item3.text'),
         },
         {
-          head: this.$i18n.t("question.item5.title"),
-          content: this.$i18n.t("question.item5.text"),
+          head: this.$i18n.t('question.item5.title'),
+          content: this.$i18n.t('question.item5.text'),
         },
 
         {
-          head: this.$i18n.t("question.item4.title"),
-          content: this.$i18n.t("question.item4.text"),
+          head: this.$i18n.t('question.item4.title'),
+          content: this.$i18n.t('question.item4.text'),
         },
         {
-          head: this.$i18n.t("question.item6.title"),
-          content: this.$i18n.t("question.item6.text"),
+          head: this.$i18n.t('question.item6.title'),
+          content: this.$i18n.t('question.item6.text'),
         },
         {
-          head: this.$i18n.t("question.item8.title"),
-          content: this.$i18n.t("question.item8.text"),
+          head: this.$i18n.t('question.item8.title'),
+          content: this.$i18n.t('question.item8.text'),
         },
       ],
-    };
+    }
   },
-  head() {
+  head () {
     return {
       meta: [
         {
-          hid: "twitter:title",
-          name: "twitter:title",
+          hid: 'twitter:title',
+          name: 'twitter:title',
           content:
-            "CryptoCourse: криптокошелёк и банковская карта в одном приложении",
+            'CryptoCourse: криптокошелёк и банковская карта в одном приложении',
         },
         {
-          hid: "twitter:description",
-          name: "twitter:description",
+          hid: 'twitter:description',
+          name: 'twitter:description',
           content:
-            "Простое и удобное приложение для управления собственными криптокошельками. Закажите банковскую карту CryptoCourse и получите прямой доступ к сделкам с криптовалютой.",
+            'Простое и удобное приложение для управления собственными криптокошельками. Закажите банковскую карту CryptoCourse и получите прямой доступ к сделкам с криптовалютой.',
         },
         {
-          hid: "og:title",
-          property: "og:title",
+          hid: 'og:title',
+          property: 'og:title',
           content:
-            "CryptoCourse: криптокошелёк и банковская карта в одном приложении",
+            'CryptoCourse: криптокошелёк и банковская карта в одном приложении',
         },
         {
-          hid: "og:description",
-          property: "og:description",
+          hid: 'og:description',
+          property: 'og:description',
           content:
-            "Простое и удобное приложение для управления собственными криптокошельками. Закажите банковскую карту CryptoCourse и получите прямой доступ к сделкам с криптовалютой.",
+            'Простое и удобное приложение для управления собственными криптокошельками. Закажите банковскую карту CryptoCourse и получите прямой доступ к сделкам с криптовалютой.',
         },
       ],
-    };
+    }
   },
   methods: {
-    setWindowWidth() {
-      this.windowWidth = window.innerWidth;
+    setWindowWidth () {
+      this.windowWidth = window && window.innerWidth ? window.innerWidth : 1200
     },
-    parceText(text: string) {
-      return "<p>" + text.replace("\n", "</p><p>") + "</p>";
+    parceText (text: string) {
+      return '<p>' + text.replace('\n', '</p><p>') + '</p>'
     },
-    blockAnimation() {
+    blockAnimation () {
       let options = {
         root: null,
-        rootMargin: "5px",
+        rootMargin: '5px',
         threshold: 0.5,
-      };
+      }
       let callback = function (entries: any, observer: any) {
         entries.forEach((element: any) => {
-          const target = element.target as HTMLElement;
+          const target = element.target as HTMLElement
           if (element.isIntersecting) {
-            options.rootMargin = `-${target.getBoundingClientRect().height}px`;
-            target.classList.add("animated");
-          } else {
-            if (target.hasAttribute("data-animation-loop")) {
-              target.classList.remove("animated");
-            }
+            options.rootMargin = `-${target.getBoundingClientRect().height}px`
+            target.classList.add('animated')
+          } else if (target.hasAttribute('data-animation-loop')) {
+            target.classList.remove('animated')
           }
-        });
-      };
-      let observer = new IntersectionObserver(callback, options);
+        })
+      }
+      let observer = new IntersectionObserver(callback, options)
 
       let targetArray = Array.from(
-        document.querySelectorAll("[data-animation]")
-      ) as any;
+        document.querySelectorAll('[data-animation]')
+      ) as any
       targetArray.forEach((target: any) => {
-        observer.observe(target);
-      });
+        observer.observe(target)
+      })
     },
   },
-  mounted() {
+  mounted () {
     this.$nextTick(() => {
-      window.addEventListener("resize", this.setWindowWidth);
-      this.setWindowWidth();
-      console.log(this.windowWidth);
+      window.addEventListener('resize', this.setWindowWidth)
+      this.setWindowWidth()
+      console.log(this.windowWidth)
       if (this.windowWidth >= 992) {
-        this.blockAnimation();
+        this.blockAnimation()
       } else {
         let targetArray = Array.from(
-          document.querySelectorAll("[data-animation]")
-        ) as any;
+          document.querySelectorAll('[data-animation]')
+        ) as any
         targetArray.forEach((target: any) => {
-          target.classList.add("animated");
-        });
+          target.classList.add('animated')
+        })
       }
-    });
+    })
   },
-});
+})
 </script>
 
 <style lang="scss">
@@ -695,6 +694,7 @@ export default Vue.extend({
   @include media(mobile-xxl) {
     background-position: 57%;
   }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -703,6 +703,7 @@ export default Vue.extend({
       justify-content: center;
     }
   }
+
   h1 {
     font-family: $roboto;
     font-weight: 500;
@@ -714,6 +715,7 @@ export default Vue.extend({
       color: #43465d;
     }
   }
+
   p {
     font-family: $nunito;
     font-size: 36px;
@@ -724,9 +726,11 @@ export default Vue.extend({
       margin-bottom: 20px;
     }
   }
+
   .btn-wrapper {
     display: flex;
     align-items: flex-start;
+
     .btn {
       a {
         padding: 20px 40px;
@@ -742,11 +746,13 @@ export default Vue.extend({
       line-height: 28px;
       margin-left: 20px;
       color: #43465d;
+
       .red {
         font-weight: bold;
       }
     }
   }
+
   &__content {
     width: 100%;
     max-width: 700px;
@@ -755,6 +761,7 @@ export default Vue.extend({
       margin-top: 0px;
     }
   }
+
   @include media(mobile-xxl) {
     &__wrapper {
       padding: 0 0;
@@ -772,10 +779,12 @@ export default Vue.extend({
       flex-direction: column;
       align-items: flex-start;
       align-items: center;
+
       .btn a {
         padding: 13px 20px;
         font-size: 18px;
       }
+
       .text {
         margin-left: 0px;
         margin-top: 20px;
@@ -797,6 +806,7 @@ export default Vue.extend({
     }
   }
 }
+
 .block-info {
   .block {
     width: 100%;
@@ -809,29 +819,37 @@ export default Vue.extend({
     transform-origin: center;
     opacity: 0.5;
     transform: scale(0.8);
+
     &.animated {
       transform: scale(1);
       opacity: 1;
     }
+
     &:nth-child(2) {
       transition-delay: 0.2s;
     }
+
     &:nth-child(3) {
       transition-delay: 0.4s;
     }
+
     &:nth-child(4) {
       transition-delay: 0.6s;
     }
+
     &:not(:last-child) {
       margin-right: 15px;
     }
+
     .icon {
       height: 40px;
+
       svg {
         height: 100%;
         display: block;
       }
     }
+
     .text {
       font-family: $roboto;
       font-weight: 500;
@@ -841,6 +859,7 @@ export default Vue.extend({
       margin-top: 12px;
     }
   }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -866,15 +885,19 @@ export default Vue.extend({
       .block {
         width: 100%;
         margin-right: 10px;
+
         &:not(:last-child) {
           margin-right: 10px;
         }
+
         &:nth-child(2) {
           transition-delay: 0s;
         }
+
         &:nth-child(3) {
           transition-delay: 0s;
         }
+
         &:nth-child(4) {
           transition-delay: 0s;
         }
@@ -882,20 +905,25 @@ export default Vue.extend({
     }
   }
 }
+
 .mobile_block-info {
   position: relative;
   top: -250px;
+
   button[data-action="stop"],
   button[data-action="start"] {
     display: none;
   }
+
   .tns-controls {
     display: none;
   }
+
   #tns1-iw {
     width: 80%;
     padding: 20px;
   }
+
   .block {
     opacity: 1;
     transform: scale(1);
@@ -907,10 +935,12 @@ export default Vue.extend({
       min-height: 214px;
     }
     margin-right: 15px;
+
     &:not(:last-child) {
       margin-right: 15px;
     }
   }
+
   .tns-nav {
     position: absolute;
     left: 0;
@@ -930,11 +960,13 @@ export default Vue.extend({
       margin-right: 10px;
       padding: 0 0;
       background: #efefef;
+
       &.tns-nav-active {
         background: rgb(227, 30, 36);
       }
     }
   }
+
   @media only screen and (max-width: 361px) {
     // top: -200px;
     .block {
@@ -949,30 +981,38 @@ export default Vue.extend({
     }
   }
 }
+
 .section-info {
   margin-top: 145px;
+
   .btn-wrapper {
     margin-top: 25px;
+
     .btn {
       margin: 0 auto;
     }
+
     a {
       min-height: 66px;
       font-family: "Roboto", sans-serif;
       font-weight: 500;
     }
   }
+
   &__item {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 160px;
+
     &:last-child {
       margin-bottom: 0px;
     }
+
     &:nth-child(even) {
       flex-direction: row-reverse;
     }
+
     .more {
       box-shadow: none;
       padding: 0 0;
@@ -988,6 +1028,7 @@ export default Vue.extend({
       @include media(mobile-xl) {
         font-size: 18px;
       }
+
       &:before {
         content: "";
         width: 100%;
@@ -999,9 +1040,11 @@ export default Vue.extend({
         background: #43465d;
       }
     }
+
     .text {
       width: 100%;
       max-width: 485px;
+
       h2 {
         font-family: $roboto;
         font-size: 48px;
@@ -1016,6 +1059,7 @@ export default Vue.extend({
           line-height: 34px;
         }
       }
+
       p {
         font-family: $nunito;
         color: #43465d;
@@ -1029,6 +1073,7 @@ export default Vue.extend({
           font-size: 18px;
           line-height: 28px;
         }
+
         &:not(:last-child) {
           margin-bottom: 50px;
         }
@@ -1061,17 +1106,20 @@ export default Vue.extend({
             margin-left: 10px;
           }
         }
+
         @include media(mobile-xxxl) {
           flex-direction: column;
           align-items: flex-start;
           .btn {
             width: 100%;
+
             &:not(:first-child) {
               margin-left: 0px;
               margin-top: 10px;
             }
           }
         }
+
         a {
           min-height: 66px;
 
@@ -1084,39 +1132,48 @@ export default Vue.extend({
         }
       }
     }
+
     .images {
       opacity: 0;
       transition: 0.6s;
       transition-delay: 0.6s;
+
       &-card {
         width: 100%;
         max-width: 550px;
         margin-right: 20px;
+
         .btn {
           margin: 0 auto;
         }
+
         a {
           margin: 0 auto;
           height: 66px;
         }
+
         @include media(tablet) {
           margin-right: 0px;
         }
+
         img {
           border-radius: 10px;
           display: block;
           width: 100%;
         }
       }
+
       img {
         width: 100%;
         display: block;
       }
     }
+
     &.animated {
       .images {
         opacity: 1;
       }
+
       .text {
         h2,
         p,
@@ -1126,6 +1183,7 @@ export default Vue.extend({
         }
       }
     }
+
     @include media(tablet) {
       flex-direction: column;
       justify-content: flex-start;
@@ -1151,6 +1209,7 @@ export default Vue.extend({
       }
     }
   }
+
   @include media(mobile-xxl) {
     margin-top: -120px;
     overflow: hidden;
@@ -1163,6 +1222,7 @@ export default Vue.extend({
           // width: 475px;
         }
       }
+
       // &:nth-child(3) {
       //   .images {
       //     width: 560px;
@@ -1173,26 +1233,31 @@ export default Vue.extend({
     }
   }
 }
+
 .app {
   background: url("/image/app-bg.jpg") no-repeat;
   background-size: cover;
   min-height: 465px;
   margin: 160px 0px 120px 0px;
+
   &__left {
     width: 100%;
     max-width: 485px;
     padding: 50px 0px;
   }
+
   &__right {
     position: absolute;
     right: 0;
     bottom: -5px;
   }
+
   &__wrapper {
     position: relative;
     width: 100%;
     max-width: 1000px;
     min-height: 465px;
+
     h2 {
       font-family: $roboto;
       font-weight: bold;
@@ -1205,11 +1270,13 @@ export default Vue.extend({
         line-height: 34px;
       }
     }
+
     ul {
       list-style-type: none;
       margin: 0 0;
       padding: 0 0;
       margin-bottom: 25px;
+
       li {
         font-family: $nunito;
         font-weight: 400;
@@ -1217,25 +1284,30 @@ export default Vue.extend({
         line-height: 34px;
         color: #43465d;
         display: flex;
+
         svg {
           min-width: 24px;
           margin-top: 10px;
           margin-right: 10px;
         }
+
         &:not(:last-child) {
           margin-bottom: 15px;
         }
       }
     }
+
     .btn-wrapper {
       width: 100%;
       max-width: 300px;
+
       .btn a {
         padding: 20px 40px;
         box-shadow: 0px 14px 30px rgba(227, 30, 36, 0.25);
       }
     }
   }
+
   @include media(tablet) {
     &__right {
       display: none;
@@ -1276,9 +1348,11 @@ export default Vue.extend({
     }
   }
 }
+
 .mission {
   &__head {
     margin-bottom: 35px;
+
     h2 {
       text-align: center;
       font-family: $roboto;
@@ -1295,6 +1369,7 @@ export default Vue.extend({
         line-height: 34px;
       }
     }
+
     p {
       width: 100%;
       max-width: 790px;
@@ -1315,6 +1390,7 @@ export default Vue.extend({
         line-height: 28px;
       }
     }
+
     &.animated {
       h2,
       p {
@@ -1322,6 +1398,7 @@ export default Vue.extend({
         transform: translateY(0);
       }
     }
+
     @include media(tablet) {
       h2,
       p {
@@ -1330,12 +1407,14 @@ export default Vue.extend({
       }
     }
   }
+
   &__content {
     background: #ffffff;
     box-shadow: 20px 4px 40px rgba(0, 0, 0, 0.03);
     border-radius: 5px;
     padding: 60px 102px;
     display: flex;
+
     .title {
       text-align: center;
       font-family: $roboto;
@@ -1345,6 +1424,7 @@ export default Vue.extend({
       color: #43465d;
       margin-bottom: 20px;
     }
+
     hr {
       margin-bottom: 40px;
       display: block;
@@ -1352,10 +1432,12 @@ export default Vue.extend({
       height: 1px;
       border: none;
     }
+
     ul {
       margin: 0 0;
       padding: 0 0;
       list-style-type: none;
+
       li {
         display: flex;
         font-family: $nunito;
@@ -1365,50 +1447,59 @@ export default Vue.extend({
         font-size: 18px;
         line-height: 28px;
         transition: opacity 1s,
-          transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
         transform-origin: center;
         opacity: 0.5;
         transform: scale(0.8);
+
         &.animated {
           opacity: 1;
           transform: scale(1);
         }
+
         @include media(tablet) {
           max-width: 100%;
           opacity: 1;
           transform: scale(1);
         }
+
         svg {
           min-width: 24px;
           min-height: 28px;
           margin-right: 10px;
         }
+
         &:not(:last-child) {
           margin-bottom: 30px;
         }
       }
     }
+
     @include media(tablet) {
       flex-direction: column;
     }
   }
+
   &__item {
     width: 50%;
     @include media(tablet) {
       width: 100%;
     }
+
     &-red {
       .title {
         width: 100%;
         max-width: 370px;
         text-align: center;
       }
+
       @include media(tablet) {
         margin-bottom: 50px;
         .title {
           text-align: center;
         }
       }
+
       hr {
         border-top: 2px solid #e31e24;
         width: calc(100% - 40px);
@@ -1416,13 +1507,16 @@ export default Vue.extend({
           width: 100%;
         }
       }
+
       ul li {
         opacity: 0.7;
+
         &.animated {
           opacity: 0.7;
         }
       }
     }
+
     &-green {
       hr {
         border-top: 2px solid #5bc980;
@@ -1434,20 +1528,24 @@ export default Vue.extend({
           left: 0;
         }
       }
+
       .title {
         width: 100%;
         max-width: 370px;
       }
+
       @include media(tablet) {
         .title {
           text-align: center;
         }
       }
+
       ul li svg {
         min-width: 14px;
       }
     }
   }
+
   @include media(mobile-xxl) {
     margin-top: 50px;
     &__head {
@@ -1465,8 +1563,10 @@ export default Vue.extend({
     }
   }
 }
+
 .question {
   margin-top: 120px;
+
   &__wrapper {
     &.animated {
       h2 {
@@ -1475,6 +1575,7 @@ export default Vue.extend({
       }
     }
   }
+
   h2 {
     font-family: $roboto;
     font-weight: bold;
@@ -1493,6 +1594,7 @@ export default Vue.extend({
       line-height: 34px;
     }
   }
+
   @include media(mobile-xxl) {
     margin-top: 50px;
     // h2 {
@@ -1501,8 +1603,10 @@ export default Vue.extend({
     // }
   }
 }
+
 .news {
   margin-top: 120px;
+
   &__wrapper {
     &.animated {
       h2 {
@@ -1510,11 +1614,13 @@ export default Vue.extend({
         transform: translateY(0);
       }
     }
+
     @include media(tablet) {
       opacity: 1;
       transform: translateY(0);
     }
   }
+
   h2 {
     font-family: $roboto;
     font-weight: bold;
@@ -1527,6 +1633,7 @@ export default Vue.extend({
     opacity: 0;
     transform: translateY(-40px);
   }
+
   &__list {
     width: 100%;
     max-width: 996px;
@@ -1534,17 +1641,20 @@ export default Vue.extend({
     display: flex;
     justify-content: space-between;
   }
+
   a {
     text-decoration: none;
     display: block;
     width: 100%;
     max-width: 280px;
+
     &:hover {
       .news__subtitle {
         opacity: 1;
       }
     }
   }
+
   &__who {
     font-family: $nunito;
     font-weight: 400;
@@ -1554,6 +1664,7 @@ export default Vue.extend({
     opacity: 0.5;
     margin-bottom: 10px;
   }
+
   &__title {
     font-family: $roboto;
     font-weight: 500;
@@ -1562,6 +1673,7 @@ export default Vue.extend({
     color: #43465d;
     margin-bottom: 10px;
   }
+
   &__subtitle {
     font-family: $nunito;
     font-weight: 400;
@@ -1571,6 +1683,7 @@ export default Vue.extend({
     color: #43465d;
     transition: 0.3s;
   }
+
   @include media(tablet) {
     &__list {
       max-width: 100%;
@@ -1596,8 +1709,10 @@ export default Vue.extend({
     }
   }
 }
+
 .baner {
   margin: 80px 0px 40px 0px;
+
   &__wrapper {
     background: url("/image/first-screen__bg.jpg") no-repeat;
     background-size: cover;
@@ -1608,9 +1723,11 @@ export default Vue.extend({
       padding-right: 20px;
     }
   }
+
   &__content {
     width: 100%;
     max-width: 485px;
+
     h2 {
       font-family: $roboto;
       font-weight: bold;
@@ -1619,6 +1736,7 @@ export default Vue.extend({
       color: #43465d;
       margin-bottom: 8px;
     }
+
     p {
       font-family: $nunito;
       font-weight: 400;
@@ -1627,9 +1745,11 @@ export default Vue.extend({
       color: #43465d;
       margin-bottom: 15px;
     }
+
     .btn-wrapper {
       width: 100%;
       max-width: 300px;
+
       .btn {
         a {
           padding: 20px 40px;
@@ -1638,6 +1758,7 @@ export default Vue.extend({
       }
     }
   }
+
   @include media(mobile-xxl) {
     &__wrapper {
       padding-left: 20px;
@@ -1652,6 +1773,7 @@ export default Vue.extend({
     }
   }
 }
+
 span.red {
   color: #e31e24;
   font-weight: bold;

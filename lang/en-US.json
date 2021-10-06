@@ -113,5 +113,51 @@
       "text": "Order CryptoCourse debit card linked to your account in the App and pay for the purchases as well as receive cash in ATMs around the world.",
       "title": "First cryptoсard in Eastern Europe"
     }
+  },
+  "about-card": {
+    "header": {
+      "title": "CryptoCourse Card",
+      "subtitle": "Order for free and get access to transactions with cryptocurrency",
+      "button": "Get for free"
+    },
+    "card_1": {
+      "title": "Order a card",
+      "description": "You need to complete the registration process and go through online identification on CryptoCourse app. Then you need to apply for VISA international system bank card BYN, USD or EUR with 3 years' validity. Your CryptoCourse card will be delivered for free."
+    },
+    "card_2": {
+      "title": "Buy Bitcoin easy",
+      "description": "With CryptoCourse app on Currency.com exchange you can buy Bitcoin and other cryptocurrencies directly from the card without additional commission fee. Recharge the balance of your CryptoCourse card with any of your bank payment card."
+    },
+    "card_3": {
+      "title": "Sell crypto in one click",
+      "description": "All funds from the sale of the cryptocurrency will be credited to your account free of charge. \n\nPay for the purchases with CryptoCourse card as well as receive cash in ATMs around the world."
+    },
+    "card_4": {
+      "title": "Store your funds in a bank account",
+      "description": "You don’t have to withdraw fiat money from wallets or exchanges anymore, your money already will be on your account and your CryptoCourse card.  \nIt’s possible by the integration of the application with BSB Bank."
+    }
+  },
+  "conditions": {
+    "title": "Terms and conditions of the card",
+    "condition_1": {
+      "name": "Validity period",
+      "value": "3 years"
+    },
+    "condition_2": {
+      "name": "Card issue and delivery",
+      "value": "for free"
+    },
+    "condition_3": {
+      "name": "Service for the entire card validity period and renewal",
+      "value": "for free"
+    },
+    "condition_4": {
+      "name": "Crediting money from the sale of cryptocurrency",
+      "value": "for free"
+    },
+    "condition_5": {
+      "name": "Available services",
+      "value": "Apple Pay, Samsung Pay, Garmin Pay, Mi Pay, Кошелёк Pay"
+    }
   }
 }
