@@ -50,19 +50,30 @@ export default {
       }
     ]
   },
-  css: ['~/assets/css/bootstrap.min.css'],
+  css: [
+    '~/assets/css/bootstrap.min.css',
+  ],
   styleResources: {
     scss: ['~/assets/scss/common.scss']
   },
 
-  plugins: [{
-    src: '~/plugins/tiny-slider.js',
-    mode: 'client',
-  }],
+  plugins: [
+    {
+      src: '~/plugins/tiny-slider.js',
+      mode: 'client',
+    }
+  ],
   components: true,
   buildModules: [
-    '@nuxt/typescript-build'
+    '@nuxt/typescript-build',
+    'nuxt-gsap-module'
   ],
+  gsap: {
+    extraPlugins: {
+      // scrollTo: true,
+      scrollTrigger: true
+    }
+  },
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa',

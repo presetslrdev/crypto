@@ -41,7 +41,6 @@ export default Vue.extend({
       type: String,
       required: false,
       // eslint-disable-next-line vue/require-valid-default-prop
-      default: false
     },
     to: {
       type: String,

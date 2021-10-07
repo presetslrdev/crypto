@@ -1,6 +1,6 @@
 <template>
   <div class="c-card__wrapper">
-    <div class="c-card" :class="{'overflow-hidden': overflowHidden}">
+    <div class="c-card h-100" :class="{'overflow-hidden': overflowHidden}">
       <div v-if="logo" class="c-card__logo">
         <img :src="logo" alt="logo">
       </div>
@@ -128,6 +128,14 @@ export default {
         bottom: -19px;
       }
     }
+
+    &.h-100 {
+      height: auto !important;
+    }
+
+    &__logo {
+    zoom: 0.6;
+  }
   }
 }
 </style>

@@ -662,6 +662,10 @@ export default Vue.extend({
       })
     },
   },
+  beforeRouteUpdate (to, from, next) {
+    console.log(to, from)
+    // don't forget to call next()
+  },
   mounted () {
     this.$nextTick(() => {
       window.addEventListener('resize', this.setWindowWidth)
@@ -679,6 +683,11 @@ export default Vue.extend({
       }
     })
   },
+  watch: {
+    '$route': (to, from) => {
+      console.log(to, from)
+    }
+  }
 })
 </script>
 

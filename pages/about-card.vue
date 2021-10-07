@@ -11,18 +11,27 @@
           <div class="animated-bounce">
             <img src="/image/about-card.png" alt="about crypto card bsb" class="card">
           </div>
+          <div class="card-shadow">
+            <img src="/image/card-shadow.png" alt="shadow">
+          </div>
         </div>
         <div class="btn-wrapper mt-64">
-          <btn narrow>
+          <btn narrow type="">
             {{ $t('about-card.header.button') }}
           </btn>
         </div>
       </div>
       <div class="col images images-card desktop">
         <div class="animated-bounce">
-          <img src="/image/about-card.png" alt="about crypto card bsb" id="card" class="card">
+          <img id="card" src="/image/about-card.png" alt="about crypto card bsb" class="card">
+        </div>
+        <div class="card-shadow">
+          <img src="/image/card-shadow.png" alt="shadow" class="card-shadow">
         </div>
       </div>
+    </div>
+    <div class="divider__wrapper">
+      <div class="divider"/>
     </div>
     <div class="row row-cols-1 row-cols-lg-2">
       <div class="col">
@@ -30,7 +39,7 @@
           :title="$t('about-card.card_1.title')"
           :description="$t('about-card.card_1.description')"
           :logo="icon1Url"
-          class="h-100"
+          class="h-100 animation-pc"
         />
       </div>
       <div class="col">
@@ -38,12 +47,12 @@
           :title="$t('about-card.card_2.title')"
           :description="$t('about-card.card_2.description')"
           :logo="icon2Url"
-          class="h-100"
+          class="h-100 animation-pc"
         />
       </div>
     </div>
     <cCard
-      class="mt-64"
+      class="mt-64 animation-mobile"
       :overflow-hidden="false"
     >
       <div class="row row-cols-1 row-cols-lg-2">
@@ -77,7 +86,7 @@
       </div>
     </cCard>
     <cCard
-      class="mt-64"
+      class="mt-64 animation-mobile"
       :overflow-hidden="false"
     >
       <div class="row row-cols-1 row-cols-lg-2">
@@ -101,15 +110,17 @@
         {{ $t('conditions.title') }}
       </h2>
       <div class="conditions mt-24">
-        <transition-group name="list" tag="ul">
-          <li
-            v-for="(item, index) in conditions"
-            :key="index"
+        <div class="list">
+          <div
+            v-for="(item) in conditions"
+            :key="item.id"
+            :data-step-id="item.id"
+            class="item animated-list"
           >
             <p>{{ item.name }}</p>
             <p>{{ item.value }}</p>
-          </li>
-        </transition-group>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -127,27 +138,68 @@ export default Vue.extend({
     return {
       conditions: [
         {
+          id: 1,
           name: this.$i18n.t('conditions.condition_1.name'),
           value: this.$i18n.t('conditions.condition_1.value')
         },
         {
+          id: 2,
           name: this.$i18n.t('conditions.condition_2.name'),
           value: this.$i18n.t('conditions.condition_2.value')
         },
         {
+          id: 3,
           name: this.$i18n.t('conditions.condition_3.name'),
           value: this.$i18n.t('conditions.condition_3.value')
         },
         {
+          id: 4,
           name: this.$i18n.t('conditions.condition_4.name'),
           value: this.$i18n.t('conditions.condition_4.value')
         },
         {
+          id: 5,
           name: this.$i18n.t('conditions.condition_5.name'),
           value: this.$i18n.t('conditions.condition_5.value')
         }
       ],
       windowWidth: 1600
+    }
+  },
+  head () {
+    return {
+      title: 'CryptoCourse Сard — Оформите бесплатно в приложении',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Закажите карту и получите прямой доступ к сделкам с криптовалютой. Совершайте покупки и снимайте деньги со счёта в банкоматах по всему миру.'
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content:
+            'CryptoCourse Сard — Оформите бесплатно в приложении'
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content:
+            'Закажите карту и получите прямой доступ к сделкам с криптовалютой. Совершайте покупки и снимайте деньги со счёта в банкоматах по всему миру.'
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content:
+            'CryptoCourse Сard — Оформите бесплатно в приложении'
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content:
+            'Закажите карту и получите прямой доступ к сделкам с криптовалютой. Совершайте покупки и снимайте деньги со счёта в банкоматах по всему миру.'
+        }
+      ]
     }
   },
   computed: {
@@ -162,81 +214,158 @@ export default Vue.extend({
     }
   },
   mounted () {
-    window.addEventListener('resize', () => {
-      this.windowWidth = window.innerWidth || 1201
+    this.$nextTick(() => {
+      this.animateOnScroll()
+      this.windowWidth = window.innerWidth || this.windowWidth
+
+      window.addEventListener('resize', () => {
+        this.windowWidth = window.innerWidth || this.windowWidth
+      })
+
+      const $card = document.querySelector<HTMLElement>('#card') || null
+      const $btcTop = document.querySelector<HTMLElement>('.btc-top') || null
+      const $btcbottom = document.querySelector<HTMLElement>('.btc-bottom') || null
+      const $ethereum = document.querySelector<HTMLElement>('.ethereum') || null
+      const $litecoin = document.querySelector<HTMLElement>('.litecoin') || null
+
+      const cumulativeOffset = (element: any) => {
+        let top = 0
+        let left = 0
+        do {
+          top += element.offsetTop || 0
+          left += element.offsetLeft || 0
+          element = element.offsetParent
+        } while (element)
+
+        return {
+          top,
+          left
+        }
+      }
+
+      // eslint-disable-next-line no-undef
+      document.onmousemove = _.throttle((event: any) => {
+        const e = event || window.event
+        const x = (e.pageX - cumulativeOffset($card).left - (10 / 2)) * -1 / 100
+        const y = (e.pageY - cumulativeOffset($card).top - (10 / 2)) * -1 / 100
+
+        const matrix = [
+          [1, 0, 0, -x * 0.000005],
+          [0, 1, 0, -y * 0.000005],
+          [0, 0, 1, 1],
+          [0, 0, 0, 1]
+        ]
+        if (this.isPC) {
+          if ($card) {
+            $card.style.transform = `matrix3d(${matrix.toString()})`
+          }
+          if ($btcTop) {
+            $btcTop.style.transform = `translate(${x / 3}px,${y / 2}px) rotate(${-x / 1.5}deg)`
+          }
+          if ($btcbottom) {
+            $btcbottom.style.transform = `translate(${x / 1.5}px,${y / 1}px) rotate(${y / 2}deg)`
+          }
+          if ($ethereum) {
+            $ethereum.style.transform = `translate(${-x / 2}px,${y / 4}px) rotate(${-y / 1}deg)`
+          }
+          if ($litecoin) {
+            $litecoin.style.transform = `translate(${x / 1}px,${-y / 2}px) rotate(${x / 1.7}deg)`
+          }
+        } else {
+          if ($card) {
+            $card.style.transform = ''
+          }
+          if ($btcTop) {
+            $btcTop.style.transform = ''
+          }
+          if ($btcbottom) {
+            $btcbottom.style.transform = ''
+          }
+          if ($ethereum) {
+            $ethereum.style.transform = ''
+          }
+          if ($litecoin) {
+            $litecoin.style.transform = ''
+          }
+        }
+      }, 50)
     })
-
-    const $card = document.querySelector<HTMLElement>('#card') || null
-    const $btcTop = document.querySelector<HTMLElement>('.btc-top') || null
-    const $btcbottom = document.querySelector<HTMLElement>('.btc-bottom') || null
-    const $ethereum = document.querySelector<HTMLElement>('.ethereum') || null
-    const $litecoin = document.querySelector<HTMLElement>('.litecoin') || null
-
-    const cumulativeOffset = (element: any) => {
-      let top = 0
-      let left = 0
-      do {
-        top += element.offsetTop || 0
-        left += element.offsetLeft || 0
-        element = element.offsetParent
-      } while (element)
-
-      return {
-        top,
-        left
-      }
-    }
-
-    // eslint-disable-next-line no-undef
-    document.onmousemove = _.throttle((event: any) => {
-      const e = event || window.event
-      const x = (e.pageX - cumulativeOffset($card).left - (10 / 2)) * -1 / 100
-      const y = (e.pageY - cumulativeOffset($card).top - (10 / 2)) * -1 / 100
-
-      const matrix = [
-        [1, 0, 0, -x * 0.000005],
-        [0, 1, 0, -y * 0.000005],
-        [0, 0, 1, 1],
-        [0, 0, 0, 1]
-      ]
-      if (this.isPC) {
-        if ($card) {
-          $card.style.transform = `matrix3d(${matrix.toString()})`
-        }
-        if ($btcTop) {
-          $btcTop.style.transform = `translate(${x / 3}px,${y / 2}px) rotate(${-x / 1.5}deg)`
-        }
-        if ($btcbottom) {
-          $btcbottom.style.transform = `translate(${x / 1.5}px,${y / 1}px) rotate(${y / 2}deg)`
-        }
-        if ($ethereum) {
-          $ethereum.style.transform = `translate(${-x / 2}px,${y / 4}px) rotate(${-y / 1}deg)`
-        }
-        if ($litecoin) {
-          $litecoin.style.transform = `translate(${x / 1}px,${-y / 2}px) rotate(${x / 1.7}deg)`
-        }
-      } else {
-        if ($card) {
-          $card.style.transform = ''
-        }
-        if ($btcTop) {
-          $btcTop.style.transform = ''
-        }
-        if ($btcbottom) {
-          $btcbottom.style.transform = ''
-        }
-        if ($ethereum) {
-          $ethereum.style.transform = ''
-        }
-        if ($litecoin) {
-          $litecoin.style.transform = ''
-        }
-      }
-    }, 50)
   },
   methods: {
     parceText (text: string) {
       return '<p>' + text.replace('\n', '</p><p>') + '</p>'
+    },
+    animateOnScroll () {
+      /* //@ts-ignore
+      this.$gsap.utils.toArray('.c-card').forEach((elem: any): any => {
+        //@ts-ignore
+        this.$gsap.from(elem, { */
+      if (this.isPC) {
+        // @ts-ignore
+        this.$gsap.from('.animation-pc', {
+          ease: 'Power1.easeInOut',
+          scrollTrigger: {
+            trigger: '.animation-pc',
+            start: 'center bottom'
+            // scrub: true,
+          },
+          delay: 0.3,
+          duration: 0.5,
+          opacity: 0,
+          y: -70,
+          stagger: 0.2
+        })
+
+        // @ts-ignore
+        this.$gsap.utils.toArray('.animation-mobile').forEach((elem: any): any => {
+          // @ts-ignore
+          this.$gsap.from(elem, {
+            ease: 'Power1.easeInOut',
+            scrollTrigger: {
+              trigger: elem,
+              start: 'center bottom'
+            },
+            delay: 0.3,
+            duration: 0.5,
+            opacity: 0,
+            y: -70
+          })
+        })
+      } else {
+        // @ts-ignore
+        this.$gsap.from('.c-card', {
+          ease: 'Power1.easeInOut',
+          scrollTrigger: {
+            trigger: '.c-card',
+            start: 'center bottom'
+          },
+          delay: 0.3,
+          duration: 0.5,
+          opacity: 0,
+          y: -70,
+          stagger: 0.2
+        })
+      }
+
+      // @ts-ignore
+      this.$gsap.from('.animated-list', {
+        ease: 'Power1.easeInOut',
+        scrollTrigger: {
+          trigger: '.list'
+          // start: 'bottom bottom',
+          // pin: true,
+          // end: '+=70',
+          // once: true,
+          // markers: true,
+          // snap: true,
+          // scrub: true,
+        },
+        delay: 0.3,
+        duration: 0.5,
+        opacity: 0,
+        y: -60,
+        stagger: 0.1
+      })
     }
   }
 })
@@ -249,6 +378,30 @@ h1 {
   line-height: 82px;
   color: #43465D;
   margin-bottom: 25px;
+}
+
+.divider {
+  &__wrapper {
+    position: relative;
+    margin: 40px 0 200px;
+  }
+
+  width: 105vw;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0px);
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 180px;
+    position: absolute;
+    background: linear-gradient(
+        180deg, rgba(249, 249, 249, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: inset 0px 26px 60px rgb(46 47 49 / 4%);
+    transform: rotate(
+        -3deg);
+  }
 }
 
 .animated-bounce {
@@ -268,6 +421,21 @@ h1 {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes shadow {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scaleX(0.9);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
   }
 }
 
@@ -339,8 +507,17 @@ h1 {
   }
 
   .images-card {
+
     &.desktop {
-      display: flex;
+      //display: flex;
+      .card-shadow {
+        position: absolute;
+        bottom: 2px;
+        left: 28px;
+        animation: 6s ease-in-out 0s infinite normal none running shadow;
+        transform-origin: bottom left;
+        filter: blur(3px);
+      }
     }
 
     &.mobile {
@@ -350,6 +527,18 @@ h1 {
 
       img {
         max-width: 100%;
+      }
+
+      .card-shadow {
+        position: absolute;
+        bottom: 63px;
+        left: 49px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        animation: 6s ease-in-out 0s infinite normal none running shadow;
+        transform-origin: bottom left;
+        filter: blur(3px);
       }
     }
   }
@@ -364,6 +553,8 @@ h1 {
 
 .conditions {
   &__wrapper {
+    margin-bottom: 96px;
+
     h2 {
       font-family: $roboto;
       font-style: normal;
@@ -374,14 +565,14 @@ h1 {
     }
   }
 
-  ul {
+  .list {
     list-style: none;
     display: flex;
     flex-direction: column;
     margin-bottom: 42px;
     padding-left: 0;
 
-    li {
+    .item {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -416,14 +607,16 @@ h1 {
   margin-top: 64px;
 }
 
-.h-100 {
-  height: 100%;
-}
-
 @media only screen and (max-width: 1139px) {
   h1 {
     font-size: 46px;
     line-height: 48px;
+  }
+  .divider {
+    &__wrapper {
+      position: relative;
+      margin: 40px 0 160px;
+    }
   }
   .images-card {
     &.desktop {
@@ -449,44 +642,91 @@ h1 {
     line-height: 40px
   }
 
-  .conditions ul li p {
+  .conditions .list .item p {
     font-size: 18px;
     line-height: 20px;
   }
-
 }
 
 @media only screen and (max-width: 750px) {
-  .conditions ul li {
+  .conditions {
+    &__wrapper {
+      margin-bottom: 64px;
+    }
+  }
+  .conditions .list .item {
     align-items: flex-start;
     flex-direction: column;
+
     p:first-child {
       padding-bottom: 12px;
     }
   }
+  .divider {
+    &__wrapper {
+      position: relative;
+      margin: 40px 0 80px;
+    }
+  }
 }
 
-@media only screen and (max-width: 365px) {
+@media only screen and (max-width: 580px) {
+  .about-card__header {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
   .images-block {
     .icon {
       &.btc-top {
-        transform: scale(0.6);
-        top: -12%;
-        right: 25%;
+        zoom: 0.7;
+        //top: -12%;
+        right: 35%;
       }
 
       &.btc-bottom {
-        transform: scale(0.6);
-        left: -5%;
+        zoom: 0.7;
+        left: 5%;
+        top: 75%;
       }
 
       &.litecoin {
-        transform: scale(0.6);
+        zoom: 0.7;
+        left: 2%;
       }
 
       &.ethereum {
-        transform: scale(0.6);
-        right: 30%;
+        zoom: 0.7;
+        right: 37%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .images-block {
+    .icon {
+      &.btc-top {
+        zoom: 0.55;
+        top: -5%;
+        right: 35%;
+      }
+
+      &.btc-bottom {
+        zoom: 0.55;
+        left: 5%;
+        top: 75%;
+      }
+
+      &.litecoin {
+        zoom: 0.5;
+        left: 2%;
+      }
+
+      &.ethereum {
+        zoom: 0.55;
+        right: 37%;
       }
     }
   }

@@ -1,1 +1,14 @@
-<svg width="138" height="117" fill="none" xmlns="http://www.w3.org/2000/svg"><g><circle cx="90.79" cy="25.8" fill="#FF802C" fill-opacity=".16" r="90.63"/></g><path d="M108.93-3.26c-4.97-8.17-13.83-7.6-23.46-4.07l-5.72-11.93-7.24 3.62 5.43 11.58c-1.85.94-3.7 1.88-5.87 2.78l-5.58-11.75-7.06 3.47 5.72 11.93-14.62 7.05 3.73 7.73s5.38-2.67 5.21-2.53c3-1.3 4.82-.17 5.65 1.2l15.54 32.75c.22.98.53 2.77-1.64 3.68.14.17-5.21 2.53-5.21 2.53l2.77 9.4 14.76-6.88 5.86 12.1 7.38-3.43-5.72-11.93c2-.77 4.02-1.85 5.88-2.79l5.72 11.93 7.38-3.43-5.72-11.94c11.84-6.52 19.1-13.65 14.5-25.63-3.54-9.64-9.9-11.7-17.59-10.06 2.68-4.54 3.64-9.4-.1-15.38Zm2.14 30.63c4.24 9.07-11.59 15.36-16.62 17.75l-7.58-15.96c4.9-2.56 19.67-11.2 24.2-1.79ZM96.95 6.3c3.84 8.23-9.47 13.32-13.66 15.31L76.37 7.15c4.2-1.99 16.45-9.43 20.58-.86Z" fill="#fff"/><defs><filter id="zxc" x="-38.06" y="-103.05" width="257.69" height="257.7" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImage" stdDeviation="19.11"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur"/><feBlend in="SourceGraphic" in2="effect1_backgroundBlur" result="shape"/></filter></defs></svg>
+<svg width="139" height="146" viewBox="0 0 139 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <ellipse cx="90.7896" cy="54.8014" rx="90.6344" ry="90.6344" fill="#FF802C" fill-opacity="0.16"/>
+  </g>
+  <path d="M108.928 25.74C103.961 17.5657 95.0988 18.1363 85.467 21.6738L79.745 9.74242L72.5077 13.355L77.9435 24.938C76.0906 25.877 74.2378 26.8159 72.0677 27.7236L66.4888 15.9664L59.4256 19.436L65.1476 31.3674L50.5299 38.4184L54.2594 46.1508C54.2594 46.1508 59.6439 43.4771 59.4698 43.6201C62.4793 42.3144 64.2897 43.4531 65.1176 44.8155L80.6589 77.5677C80.8833 78.5505 81.189 80.342 79.019 81.2498C79.1621 81.424 73.8086 83.7804 73.8086 83.7804L76.5751 93.1797L91.336 86.3029L97.2011 98.4085L104.582 94.9701L98.8595 83.0386C100.856 82.2739 102.882 81.192 104.735 80.2531L110.457 92.1845L117.838 88.7461L112.116 76.8147C123.96 70.2919 131.22 63.1586 126.624 51.1777C123.08 41.5419 116.716 39.4756 109.03 41.1226C111.714 36.5823 112.67 31.7121 108.928 25.74ZM111.066 56.3749C115.306 65.4385 99.4815 71.7304 94.4452 74.118L86.8738 58.1618C91.767 55.6 106.539 46.9629 111.066 56.3749ZM96.9491 35.292C100.791 43.5158 87.4843 48.6139 83.2874 50.6036L76.3699 36.1528C80.5668 34.1631 92.821 26.7198 96.9491 35.292Z" fill="white"/>
+  <defs>
+    <filter x="-38.0582" y="-74.0465" width="257.695" height="257.696" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feGaussianBlur in="BackgroundImage" stdDeviation="19.1067"/>
+      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur" result="shape"/>
+    </filter>
+  </defs>
+</svg>
